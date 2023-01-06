@@ -1,4 +1,4 @@
-Web app project to track my stash.
+Web app project to track my ~~stash~~ finance haha.
 
 I plan on utilizing the MERN stack and the following frameworks:
 
