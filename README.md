@@ -1,5 +1,5 @@
-<h1>Track my Stash</h1>
-<h2>Project Description</h2>
+# Track my Stash
+## Project Description
 Web app project to track my ~~stash~~ finance haha.
 
 I plan on utilizing the MERN stack and the following frameworks:
