@@ -6,9 +6,9 @@ I plan on utilizing the MERN stack and the following frameworks:
 * Tailwind CSS <br>
 * Express.js
 
-Still need to connect to Mongo DB with Mongoose.
+Still need to connect to Mongo DB with Mongoose and ensure that a connection is made from the client (frontend) to the server (backend).
 
-Can follow this guideline https://blog.logrocket.com/mern-stack-tutorial/ and https://blog.logrocket.com/how-to-set-up-node-typescript-express/
+Can follow this guideline https://blog.logrocket.com/mern-stack-tutorial/
 
 ## Documentation
 ### NPM Related
