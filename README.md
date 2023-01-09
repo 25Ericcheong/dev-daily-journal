@@ -12,10 +12,6 @@ Can follow this guideline https://blog.logrocket.com/mern-stack-tutorial/
 
 ## Documentation
 ### NPM Related
-<details>
-<summary>#### Setting up for Development</summary>
-This is a dropdown with text!
-</details>
 #### Setting up for Development
 * Had a bit of a hiccup when trying to setup the backend. Realized that the scripts command be executed were not correctly set. This will be used as a reference to explain why specific commands were used based on attached source (a bit more researching done for my benefit). 
 * `npx tsc` compiles the TypeScipript back to vanilla JavaScript. To ensure we do not need to run this command over again, we can ensure this is watched and include the following command `npx tsc --watch` which compiles our project whenever any changes are made/saved. 
