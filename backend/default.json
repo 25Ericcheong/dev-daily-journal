@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://25Ericcheong:<password>@track-my-stash.oaumgwc.mongodb.net/?retryWrites=true&w=majority",
+  "reminder": "replace password"
+}
