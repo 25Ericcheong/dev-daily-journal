@@ -1,6 +1,6 @@
-# Track my Stash
+# Dev daily journal
 ## Project Description
-Web app project to track my ~~stash~~ finance haha.
+Web app project to log what I've learnt and my daily achievements!
 
 I plan on utilizing the MERN stack and the following frameworks:
 * Tailwind CSS <br>
