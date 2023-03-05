@@ -7,6 +7,6 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
 - Use and familiarize Ruby on Rails as the backend and ensure React can be rendered in the server (with TypeScript as well if possible). In addition to this, I also would like to learn PostgreSQL too.
 
 ## Timeline
-- [] Project configuration and setup (such that I can use TypeScript with Ruby on Rails in the project without any errors) [19/03/2023]
-- [] To be able to create, modify, acquire and delete existing logs [02/04/2023]
-- [] A starting page that asks user to create an account or allow them to look at my "achievements" [09/04/2023]
+- [ ] Project configuration and setup (such that I can use TypeScript with Ruby on Rails in the project without any errors) [19/03/2023]
+- [ ] To be able to create, modify, acquire and delete existing logs [02/04/2023]
+- [ ] A starting page that asks user to create an account or allow them to look at my "achievements" [09/04/2023]
