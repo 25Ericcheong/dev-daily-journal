@@ -10,3 +10,8 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
 - [ ] Project configuration and setup (such that I can use TypeScript with Ruby on Rails in the project without any errors) [19/03/2023]
 - [ ] To be able to create, modify, acquire and delete existing logs [02/04/2023]
 - [ ] A starting page that asks user to create an account or allow them to look at my "achievements" [09/04/2023]
+- [ ] Deployment and bug fixes if any pops up [23/04/2023]
+
+## Bonus
+- [ ] Setting up tools for testing that tests code before pushing things into production. Possibly have an isolated testing environment first [???]
+- [ ] Continuous integration to ensure tests are executed and provide feedback if something goes wrong [???]
