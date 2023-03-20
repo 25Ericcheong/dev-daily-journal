@@ -1,4 +1,4 @@
-/node_modules
-/backend/node_modules
-/frontend/node_modules
-/backend/config/default.json
+.env
+.env.*
+node_modules
+build
