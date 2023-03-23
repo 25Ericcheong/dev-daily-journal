@@ -7,7 +7,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
 - Use and familiarize Node.js as the backend and ensure React can be rendered in the server (with TypeScript as well if possible). In addition to this, I also would like to learn PostgreSQL too (or Mongo in this case).
 
 ## Timeline
-- [ ] Project configuration and setup (such that I can use TypeScript with Express.js in the project without any errors) [19/03/2023]
+- [ ] Project configuration and setup [19/03/2023]
 - [ ] To be able to create, modify, acquire and delete existing logs [02/04/2023]
 - [ ] A starting page that asks user to create an account or allow them to look at my "achievements" [09/04/2023]
 - [ ] Deployment and bug fixes if any pops up [23/04/2023]
