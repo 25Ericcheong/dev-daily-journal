@@ -18,3 +18,11 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
 
 ## Structure
 - The Odin project will be the guide that I will follow as I slowly build this project and with progress - I will document each step of it for reference and at the same time; data to be inserted into this project haha. 
+
+## Mongo DB introduction
+- Materials are obtained from the [MongoDB](https://learn.mongodb.com/learning-paths/introduction-to-mongodb) official website. This section would consist of short pointers I would like to refer back to in the future if needed and will probably be included in this web app too.
+
+<details><summary>Intro to MongoDB</summary>
+- test
+- more test
+</details>
