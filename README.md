@@ -22,7 +22,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
 ## Mongo DB introduction
 - Materials are obtained from the [MongoDB](https://learn.mongodb.com/learning-paths/introduction-to-mongodb) official website. This section would consist of short pointers I would like to refer back to in the future if needed and will probably be included in this web app too.
 
-<details><summary>Intro to MongoDB</summary>
+<details><summary><h4>Intro to MongoDB</h4></summary>
 <ul>
   <li>test</li>
   <li>more test</li>
