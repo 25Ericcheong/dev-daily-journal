@@ -26,7 +26,13 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
 
 <details><summary><h4>Intro to MongoDB</h4></summary>
 <ul>
-  <li>test</li>
-  <li>more test</li>
+  <li>Notable keywords; CRUD with MongoDB, search experience, aggregation, indexing, data modeling and transactions</li>
+  <li>All exercises are done via IDE on MongoDB course (which is connected to an Atlas cluster)</li>
+</ul>
+</details>
+
+<details><summary><h4>Getting Started with MOngoDB Atlas</h4></summary>
+<ul>
+  <li></li>
 </ul>
 </details>
