@@ -85,7 +85,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
   </ol>
 </details>
 
-<li><details><summary><h4>Connecting to a MongoDB Database</h4></summary>
+<details><summary><h4>Connecting to a MongoDB Database</h4></summary>
   <ol>
     <li><details><summary><h4>Using MongoDB connection strings</h4></summary>
       <ul>
@@ -98,4 +98,4 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
      </ul>
     </details></li>
   </ol>
-</details></li>
+</details>
