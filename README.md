@@ -35,8 +35,8 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
 <details><summary><h4>Getting Started with MongoDB Atlas</h4></summary>
   <ol>
     <li><details><summary><h4>Introduction to MongoDB - Developer Data Platform</h4></summary>
-    <ul>
-      <li>Database as a serivce (DBaaS) - do not need to configure or manage database but Atlas would do this for us</li>
+      <ul>
+        <li>Database as a serivce (DBaaS) - do not need to configure or manage database but Atlas would do this for us</li>
         <li>Replica Set: data is stored in more than one server (a group of server that holds data). Redundancy and availability</li>
         <li>Type of instances: Clusters (Shared & Dedicated) - serveral mongo servers working  together</li>
         <li>Type of instances: Serverless - charge based on usage and will scale depending  on needs</li>
@@ -52,6 +52,21 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Remember add own IP address (or any other) so that MongoDB Atlas doesn't block as it blocks everything but anything within Atlas themselves</li>
         <li>Data explorer can be used to visualize existing data in clusters</li>
       </ul>
+    </details></li>
+  </ol>
+</details>
+
+
+<details><summary><h4>MongoDB and the Document Model</h4></summary>
+  <ol>
+    <li><details><summary><h4>MongoDB database</h4></summary>
+      <ul>
+        <li>MongoDB stored as documents similar to JSON - able to use one format for any applicaitons</li>
+        <li>Document - basic unit of data in MongoDB</li>
+        <li>Collection - set of documents (structure may not be the same within collection since a document has flexible schema)</li>
+        <li>Database - set of collections</li>
+        <li>Atlas offers full text search and data visualization</li>
+     </ul>
     </details></li>
   </ol>
 </details>
