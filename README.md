@@ -15,7 +15,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
 ## Bonus
 - [ ] Setting up tools for testing that tests code before pushing things into production. Possibly have an isolated testing environment first [???]
 - [ ] Continuous integration to ensure tests are executed and provide feedback if something goes wrong [???]
-- [ ] MongoDB introduction course on MongoDB university
+- [ ] Completing MongoDB introduction course on MongoDB university
 
 ## Structure
 - The Odin project will be the guide that I will follow as I slowly build this project and with progress - I will document each step of it for reference and at the same time; data to be inserted into this project haha. 
