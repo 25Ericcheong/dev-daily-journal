@@ -76,5 +76,16 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>To have more control over database, can have optional schema validation in placed. This can be used to constraint structure of documents.</li> 
        </ul>
     </details></li>
+    <li><details><summary><h4>Managing Databases, Collections, and Documents in Atlas Data Explorer</h4></summary>
+      <ul>
+        <li>Atlas Data Explorer - can create collections or databases and insert documents into databases as required</li>
+        <li>Atlas UI - useful for testing purposes</li>
+       </ul>
+    </details></li>
+    <li><details><summary><h4>Connecting to a MongoDB Database</h4></summary>
+      <ul>
+        <li>Connection string</li>
+      </ul>
+    </details></li>
   </ol>
 </details>
