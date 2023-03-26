@@ -33,7 +33,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
 
 <details><summary><h4>Getting Started with MongoDB Atlas</h4></summary>
     <details>
-    <summary><h4>Introduction to MongoDB - Developer Data Platform</h4></summary>
+    &nbsp;&nbsp;&nbsp;&nbsp;<summary><h4>Introduction to MongoDB - Developer Data Platform</h4></summary>
       <ul>
         <li>Database as a serivce (DBaaS) - do not need to configure or manage database but Atlas would do this for us</li>
         <li>Replica Set: data is stored in more than one server (a group of server that holds data). Redundancy and availability</li>
@@ -43,7 +43,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
       </ul>
     </details>
     <details>
-    <summary><h4>Creating and deploying at Atlas cluster</h4></summary>
+    &nbsp;&nbsp;&nbsp;&nbsp;<summary><h4>Creating and deploying at Atlas cluster</h4></summary>
       <ul>
         <li>Organizations - define and manager userss and teams</li>
         <li>Projects - create separate projects for development, testing and production</li>
