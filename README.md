@@ -68,5 +68,11 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Atlas offers full text search and data visualization</li>
      </ul>
     </details></li>
+    <li><details><summary><h4>MongoDB Document Model</h4></summary>
+      <ul>
+        <li>Documents displayed in JSON and stored in BSON (extension of JSON but in binary) on database.</li>
+        <li>Every document requires `_id` field, if document doesn't have one - MongoDB auto generates ObjectId to represent `_id` field</li>
+     </ul>
+    </details></li>
   </ol>
 </details>
