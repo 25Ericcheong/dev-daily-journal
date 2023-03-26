@@ -42,4 +42,14 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Has data API, graphQL API and triggers to enable event driven architecture</li>
       </ul>
     </details>
+    <details>
+    <summary><h4>Creating and deploying at Atlas cluster</h4></summary>
+      <ul>
+        <li>Organizations - define and manager userss and teams</li>
+        <li>Projects - create separate projects for development, testing and production</li>
+        <li>Add database user for SSH purposes</li>
+        <li>Remember add own IP address (or any other) so that MongoDB Atlas doesn't block as it blocks everything but anything within Atlas themselves</li>
+        <li>Data explorer can be used to visualize existing data in clusters</li>
+      </ul>
+    </details>
 </details>
