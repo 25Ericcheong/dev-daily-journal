@@ -3,7 +3,7 @@
 Web app project to log what I've learnt and my daily achievements! I haven't really been able to log these achievements in a more structured manner and I believe by having a personalized or internal tool - I would be able to do this more!
 
 ## Goals
-- Naturally, this web app or tool should enable a user to create a log, categorize the log as an achievement or a simple note and save these newly created logs in a database. User should be able to delete or modify these logs as well.
+- Naturally, this web app or tool should enable a user to create a log, categorize the log as an achievement or a simple note (also attach tags to them to help with searching later on) and save these newly created logs in a database. User should be able to delete or modify these logs as well.
 - Use and familiarize Node.js as the backend and ensure React can be rendered in the server (with TypeScript as well if possible). In addition to this, I also would like to learn PostgreSQL too (or Mongo in this case).
 
 ## Timeline
@@ -31,8 +31,11 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
 </ul>
 </details>
 
-<details><summary><h4>Getting Started with MOngoDB Atlas</h4></summary>
+<details><summary><h4>Getting Started with MongoDB Atlas</h4></summary>
 <ul>
-  <li></li>
+  <li>Database as a serivce (DBaaS); do not need to configure or manage database but Atlas would do this for us</li>
+  <li>Replica Set: data is stored in more than one server (a group of server that holds data). Redundancy and availability.</li>
+  <li>Type of instances: Clusters (Shared & Dedicated) - serveral mongo servers working  together</li>
+  <li>Type of instances: Serverless - charge based on usage and will scale depending  on needs</li>
 </ul>
 </details>
