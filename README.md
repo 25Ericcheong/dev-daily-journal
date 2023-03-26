@@ -99,7 +99,8 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     </details></li>
     <li><details><summary><h4>Connecting to a MongoDB Atlas Cluster with the Shell</h4></summary>
       <ul>
-        <li></li>
+        <li>Will require mongosh to connect into our cluster locally via CLI with provided connection string</li>
+        <li>mongosh is a Node.js REPL environment and will enable us to utilize JavaScript languages within the shell</li>
      </ul>
     </details></li>
   </ol>
