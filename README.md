@@ -103,5 +103,23 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>mongosh is a Node.js REPL environment and will enable us to utilize JavaScript languages within the shell</li>
      </ul>
     </details></li>
+    <li><details><summary><h4>Connecting to a MongoDB Atlas Cluster with MongoDB Compass</h4></summary>
+      <ul>
+        <li>GUI to allow us to query and analyze data in cluster</li>
+        <li>Enable us to acquire statistical summary of databases existing in cluster</li>
+     </ul>
+    </details></li>
+    <li><details><summary><h4>Connecting to a MongoDB Atlas Cluster from an Application</h4></summary>
+      <ul>
+        <li>MongoDB drivers allow us to connect database to application using programming language of our choice with provided connection string</li>
+        <li>MongoDB documentation to use for configuration and setting up connection to MongoDB database</li>
+     </ul>
+    </details></li>
+    <li><details><summary><h4>Troubleshooting MongoDB Atlas connection errors</h4></summary>
+      <ul>
+        <li>Network access errors - can be due to not adding IP address for network access</li>
+        <li>User authentication errors - can be due to not including password</li>
+     </ul>
+    </details></li>
   </ol>
 </details>
