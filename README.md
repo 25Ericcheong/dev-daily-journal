@@ -97,5 +97,10 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Connection string consists of username and password (created database users that have access to database), host and optional port number to database and lastly, additional options</li>
      </ul>
     </details></li>
+    <li><details><summary><h4>Connecting to a MongoDB Atlas Cluster with the Shell</h4></summary>
+      <ul>
+        <li></li>
+     </ul>
+    </details></li>
   </ol>
 </details>
