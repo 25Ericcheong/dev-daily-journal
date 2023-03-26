@@ -36,8 +36,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
   <li>
     <details>
     <summary><h4>Introduction to MongoDB - Developer Data Platform</h4></summary>
-      <li>Database as a serivce (DBaaS); do not need to configure or manage database but Atlas would do this for us</li>
-
+      <li>Database as a serivce (DBaaS) - do not need to configure or manage database but Atlas would do this for us</li>
       <li>Replica Set: data is stored in more than one server (a group of server that holds data). Redundancy and availability</li>
       <li>Type of instances: Clusters (Shared & Dedicated) - serveral mongo servers working  together</li>
       <li>Type of instances: Serverless - charge based on usage and will scale depending  on needs</li>
