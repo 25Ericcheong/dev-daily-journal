@@ -82,10 +82,20 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Atlas UI - useful for testing purposes</li>
        </ul>
     </details></li>
-    <li><details><summary><h4>Connecting to a MongoDB Database</h4></summary>
-      <ul>
-        <li>Connection string</li>
-      </ul>
-    </details></li>
   </ol>
 </details>
+
+<li><details><summary><h4>Connecting to a MongoDB Database</h4></summary>
+  <ol>
+    <li><details><summary><h4>Using MongoDB connection strings</h4></summary>
+      <ul>
+        <li>Connection strings allows us to connect to cluster and work with data. It describes host that we will be using and the options for connecting to MongoDB database</li>
+        <li>Connecting string can be used to connect from mongo shell, mongo compass or to any other app</li>
+        <li>There exists two formats of connecting string - standard format and DNS seed list format</li>
+        <li>Standard format used to connect to standalone clusters, replica sets or sharded clusters</li>
+        <li>DNS seed list format provides a DNS server list to connection string. This provides flexibility of deployment and can change servers in rotation without reconfiguring clients.</li>
+        <li>Connection string consists of username and password (created database users that have access to database), host and optional port number to database and lastly, additional options</li>
+     </ul>
+    </details></li>
+  </ol>
+</details></li>
