@@ -32,24 +32,25 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
 </details>
 
 <details><summary><h4>Getting Started with MongoDB Atlas</h4></summary>
-    <details>
-    &nbsp;&nbsp;&nbsp;&nbsp;<summary><h4>Introduction to MongoDB - Developer Data Platform</h4></summary>
-      <ul>
-        <li>Database as a serivce (DBaaS) - do not need to configure or manage database but Atlas would do this for us</li>
-        <li>Replica Set: data is stored in more than one server (a group of server that holds data). Redundancy and availability</li>
-        <li>Type of instances: Clusters (Shared & Dedicated) - serveral mongo servers working  together</li>
-        <li>Type of instances: Serverless - charge based on usage and will scale depending  on needs</li>
-        <li>Has data API, graphQL API and triggers to enable event driven architecture</li>
-      </ul>
-    </details>
-    <details>
-    &nbsp;&nbsp;&nbsp;&nbsp;<summary><h4>Creating and deploying at Atlas cluster</h4></summary>
-      <ul>
-        <li>Organizations - define and manager userss and teams</li>
-        <li>Projects - create separate projects for development, testing and production</li>
-        <li>Add database user for SSH purposes</li>
-        <li>Remember add own IP address (or any other) so that MongoDB Atlas doesn't block as it blocks everything but anything within Atlas themselves</li>
-        <li>Data explorer can be used to visualize existing data in clusters</li>
-      </ul>
-    </details>
+  <details>
+    <summary><h4>Introduction to MongoDB - Developer Data Platform</h4></summary>
+       <details>
+         <ul>
+          <li>Database as a serivce (DBaaS) - do not need to configure or manage database but Atlas would do this for us</li>
+          <li>Replica Set: data is stored in more than one server (a group of server that holds data). Redundancy and availability</li>
+          <li>Type of instances: Clusters (Shared & Dedicated) - serveral mongo servers working  together</li>
+          <li>Type of instances: Serverless - charge based on usage and will scale depending  on needs</li>
+          <li>Has data API, graphQL API and triggers to enable event driven architecture</li>
+        </ul>
+      </details>
+      <details>
+        <summary><h4>Creating and deploying at Atlas cluster</h4></summary>
+          <ul>
+            <li>Organizations - define and manager userss and teams</li>
+            <li>Projects - create separate projects for development, testing and production</li>
+            <li>Add database user for SSH purposes</li>
+            <li>Remember add own IP address (or any other) so that MongoDB Atlas doesn't block as it blocks everything but anything within Atlas themselves</li>
+            <li>Data explorer can be used to visualize existing data in clusters</li>
+          </ul>
+      </details>
 </details>
