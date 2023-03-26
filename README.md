@@ -73,9 +73,8 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Documents displayed in JSON and stored in BSON (extension of JSON but in binary which supports multiple different data types) on database.</li>
         <li>Every document requires <code>_id</code> field, if document doesn't have one - MongoDB auto generates ObjectId to represent <code>_id</code> field</li>
         <li>Collections can have different documents schemas in it (because schema is flexbile as it supports polymorphic documents).</li>
-        <li>To have more control over database, can have optional schema validation in placed. This can be used to constraint structure of documents.</li>
-        
-     </ul>
+        <li>To have more control over database, can have optional schema validation in placed. This can be used to constraint structure of documents.</li> 
+       </ul>
     </details></li>
   </ol>
 </details>
