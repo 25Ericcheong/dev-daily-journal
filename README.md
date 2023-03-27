@@ -123,3 +123,14 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     </details></li>
   </ol>
 </details>
+
+<details><summary><h4>MongoDB CRUD Operations: Insert and Find Documents</h4></summary>
+  <ol>
+    <li><details><summary><h4>Inserting Documents in a MongoDB Collection</h4></summary>
+      <ul>
+        <li><code>insertOne()</code> and <code>insertMany()</code> are the relevant code to insert documents.</li>
+        <li>Note that with the use of <code>insertOne()</code>, if the collection targeted for document insertion does not exist. It will create the collection automatically. This is worth noting as it causes collections to be created unnecessarily.</li>
+     </ul>
+    </li></details>
+  </ol>
+</details>
