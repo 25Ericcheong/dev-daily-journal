@@ -131,5 +131,12 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Note that with the use of <code>insertOne()</code>, if the collection targeted for document insertion does not exist. It will create the collection automatically. This is worth noting as it causes collections to be created unnecessarily.</li>
      </ul>
     </li></details>
+    <li><details><summary><h4>Finding documents in a MongoDB Collection</h4></summary>
+      <ul>
+        <li><code>use database-name</code> will allow us to utilize the database has the relevant collections included. Next, <code>db.collection-name.find()</code> will return documents that can be found in the collection-name inputted.</li>
+        <li>To specify what fields/values a document should have - <code>db.collection-name.find({ field-name: value })</code> can be used. This ensures that we want a specific key/field name to contain a specific value</li>
+        <li>To target multiple value for a key/field name - <code>db.collection-name.find({ field-name: { $in: [value-one, value-two] } })</code> can be considered where the values we are looking for can be value-one or value-one.</li>
+      </ul>
+    </li></details>
   </ol>
 </details>
