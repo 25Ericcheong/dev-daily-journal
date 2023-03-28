@@ -157,13 +157,14 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>The two logical operators will be $and & $or operators. Example, <code>db.collection-name.find({$and: [{field-name: value}, {another-field-name: {$gte: greater-value}}]})</code>. This can also be accomplished implicitly via <code>db.collection-name.find({field-name: value, another-field-name: {$gte: greater-value}})</code>.</li>
         <li>The $or operator is exactly the same syntax. You can also combine a single query with multiple $or and $and operator together. Note that explicit $and is required first when intention is to have two same $or being used together as the first $or operator will override the subsequent operator as it defies the JSON object structure with all keys required to be unique.</li>
         <li>Example for better visualization 
-          <pre><code>db.routes.find({
+          <pre><code>
+          db.routes.find({
             $and: [
                 { $or: [{ dst_airport: "SEA" }, { src_airport: "SEA" }] },
                 { $or: [{ "airline.name": "American Airlines" }, { airplane: 320 }] },
               ]
             })
-          </code></pre>
+         </code></pre>
         </li>
       </ul>
     </details></li>
