@@ -125,7 +125,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
 
 <details><summary><h4>MongoDB CRUD Operations: Insert and Find Documents</h4></summary>
   <ol>
-    <li><details><summary><h4>Inserting Documents in a MongoDB Collection</h4></summary>
+    <li><details><summary><h4>Inserting documents in a MongoDB Collection</h4></summary>
       <ul>
         <li><code>insertOne()</code> and <code>insertMany()</code> are the relevant code to insert documents.</li>
         <li>Note that with the use of <code>insertOne()</code>, if the collection targeted for document insertion does not exist. It will create the collection automatically. This is worth noting as it causes collections to be created unnecessarily.</li>
@@ -136,6 +136,13 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li><code>use database-name</code> will allow us to utilize the database has the relevant collections included. Next, <code>db.collection-name.find()</code> will return documents that can be found in the collection-name inputted.</li>
         <li>To specify what fields/values a document should have - <code>db.collection-name.find({ field-name: value })</code> can be used. This ensures that we want a specific key/field name to contain a specific value</li>
         <li>To target multiple value for a key/field name - <code>db.collection-name.find({ field-name: { $in: [value-one, value-two] } })</code> can be considered where the values we are looking for can be value-one or value-one.</li>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Finding documents in a MongoDB by using Comparison Operators</h4></summary>
+      <ul>
+        <li>Examples of comparison operators can be as such <code>$gt</code>, <code>$lt</code>, <code>$gte</code> and <code>$lte</code></li>
+        <li>An example of utilizing a comparison operator is <code>db.collection-name.find({ field-name: { $gt: 50 } })</code></li>. Note that in this case <code>field-name</code> could just be a field-name specifically or object.field-name (object is the sub document within a document) - depending on the structure of the document.
+        <li>Those are not the only comparison operator that exists.</li>
       </ul>
     </details></li>
   </ol>
