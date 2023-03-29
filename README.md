@@ -174,7 +174,14 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
             $or: [{ items: {name: "notepad", tags: "school"}}]
           })
           </code></pre>
-          test
+          
+          and the following code below
+          
+          <pre><code>
+          db.sales.find({
+            $or: [{ "items.name": "pens" }, { "items.tags": "writing" }],
+          })
+          </code></pre>
         </li>
       </ul>
     </details></li>
