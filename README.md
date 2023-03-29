@@ -169,13 +169,6 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Example from assignment to access a sub document with a comparison operator within it - <code>db.sales.find({ couponUsed: true,  purchaseMethod: "Online", "customer.age": { $lte: 25 } })</code></li>
         <li>
           <b>Note.</b> If there are sub documents present, and you are looking to check that the sub-documents of a specific value within its field - use the dot notation method to do this. There is a big difference between this code
-          <pre><code>
-              db.sales.find({
-                $or: [{ items: {name: "notepad", tags: "school"}}]
-              })
-          </code></pre>
-          
-          and the following code below
         </li>
       </ul>
     </details></li>
