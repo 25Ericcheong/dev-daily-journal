@@ -175,15 +175,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
             })
           </code></pre>
           
-          and the following code below
           
-          <pre><code>
-            db.sales.find({
-              $or: [{ "items.name": "pens" }, { "items.tags": "writing" }],
-            })
-          </code></pre>
-          
-          The first is we have an <code>$or</code> comparison operator (which in this case isn't really neccessary anymore) to look for an items sub document to have that specific object (if any other items sub documents with object structure that differs from this - it will not meet the query's expression then and will not show up on results). The second in this case looks for <b>any</b> items sub document with either of the fields (checks if it exists) along with the value provided. If any is true, the document will show up regardless of the <a>object structure</a href="https://stackoverflow.com/questions/38129635/mongodb-accessing-subdocuments" target="_blank">. 
         </li>
       </ul>
     </details></li>
