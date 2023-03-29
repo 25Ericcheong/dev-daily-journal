@@ -186,11 +186,11 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
   </ol>
 </details>
 
-<details><summary><h4>Connecting to a MongoDB Database</h4></summary>
+<details><summary><h4>MongoDB CRUD Operations: Replace and Delete Documents</h4></summary>
   <ol>
-    <li><details><summary><h4>Using MongoDB connection strings</h4></summary>
+    <li><details><summary><h4>Replacing a document in MongoDB</h4></summary>
       <ul>
-        <li>Connection strings allows us to connect to cluster and work with data. It describes host that we will be using and the options for connecting to MongoDB database</li>
+        <li></li>
       </ul>
     </li></details>
   </ol>
