@@ -170,14 +170,9 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>
           <b>Note.</b> If there are sub documents present, and you are looking to check that the sub-documents has a specific value with the specified field - use the dot notation method to do this. There is a big difference between both code blocks included below
           <pre><code>
-          ==== first query ====
-          
           db.sales.find({
             $or: [{ items: {name: "notepad", tags: "school"}}]
           })
-          
-          ==== second quer ====
-          
           db.sales.find({
             $or: [{ "items.name": "pens" }, { "items.tags": "writing" }],
           })
