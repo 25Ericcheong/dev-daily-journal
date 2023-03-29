@@ -169,7 +169,6 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Example from assignment to access a sub document with a comparison operator within it - <code>db.sales.find({ couponUsed: true,  purchaseMethod: "Online", "customer.age": { $lte: 25 } })</code></li>
         <li>
           <b>Note.</b> If there are sub documents present, and you are looking to check that the sub-documents has a specific value with the specified field - use the dot notation method to do this. There is a big difference between both code blocks included below
-          
           <pre><code>
           ==== first query ====
           
@@ -183,7 +182,6 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
             $or: [{ "items.name": "pens" }, { "items.tags": "writing" }],
           })
           </code></pre>
-          
           The first is we have an <code>$or</code> comparison operator (which in this case isn't really neccessary anymore) to look for an items sub document to have that specific object (if any other items sub documents with object structure that differs from this - it will not meet the query's expression then and will not show up on results). The second in this case looks for <b>any</b> items sub document with either of the fields (checks if it exists) along with the value provided. If any is true, the document will show up regardless of the <a href="https://stackoverflow.com/questions/38129635/mongodb-accessing-subdocuments" target="_blank">object structure</a>.
         </li>
       </ul>
