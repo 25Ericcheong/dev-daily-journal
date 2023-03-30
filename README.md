@@ -225,6 +225,6 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
           </pre></code>
         </li>
       </ul>
-    </li></details>
+    </details></li>
   </ol>
 </details>
