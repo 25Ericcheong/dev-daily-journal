@@ -194,7 +194,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>In this case, <code>filter</code> would typically consist of a way to uniquely identify a document within the collection. Additionally, <code>replacement</code> would contain an updated version of the document (excluding its id field) to replace the existing document within our collection.</li>
       </ul>
     </details></li>
-        <li><details><summary><h4>Updating a Document in MongoDB</h4></summary>
+    <li><details><summary><h4>Updating a Document in MongoDB</h4></summary>
       <ul>
         <li>Commands to use - <code>updateOne(filter, update, options)</code> along with update operators - <code>$set</code> and <code>$push</code> along with <code>upsert</code> will be taught in this section which are used within the parameters of the <code>updateOne</code> method provided</li>
         <li><code>$set</code> operator can be used to add new fields or values to a document or replace existing fields with new values in a document</li>
@@ -224,6 +224,11 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
           )
           </pre></code>
         </li>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Updating a few Documents in MongoDB</h4></summary>
+      <ul>
+        <li></li>
       </ul>
     </details></li>
   </ol>
