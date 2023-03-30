@@ -188,9 +188,10 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
 
 <details><summary><h4>MongoDB CRUD Operations: Replace and Delete Documents</h4></summary>
   <ol>
-    <li><details><summary><h4>Replacing a document in MongoDB</h4></summary>
+    <li><details><summary><h4>Replacing a Document in MongoDB</h4></summary>
       <ul>
-        <li></li>
+        <li>Using the <code>db.collection-name.replaceOne(filter, replacement, options)</code> will allow us to replace a document within a collection.</li>
+        <li>In this case, <code>filter</code> would typically consist of a way to uniquely identify a document within the collection. Additionally, <code>replacement</code> would contain an updated version of the document (excluding its id field) to replace the existing document within our collection.</li>
       </ul>
     </li></details>
   </ol>
