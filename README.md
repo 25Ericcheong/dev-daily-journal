@@ -268,14 +268,16 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         </pre></code>
       </ul>
     </details></li>
-    <li><details><summary><h4>Removing documents in MongoDB</h4></summary>
+    <li><details><summary><h4>Removing one or many documents in MongoDB</h4></summary>
       <ul>
-        <li></li>
-        <li>Example is as shown</li>
+        <li>You can choose to delete a document with <code>deleteOne({filter-object})</code> or many documents with <code>deleteMany({filter-object})</code></li>
+        <li>Example is as shown to delete one document</li>
         <pre><code>
-        db.books.updateMany(
-          { publishedDate: { $lt: new Date("2019-01-01") } },
-          { $set: { status: "LEGACY" } })
+        db.birds.deleteOne({_id: ObjectId("35465")})
+        </pre></code>
+        <li>Example is as shown to delete multiple documents</li>
+        <pre><code>
+        db.birds.deleteMany({ sightings_count: { $lte: 10 } })
         </pre></code>
       </ul>
     </details></li>
