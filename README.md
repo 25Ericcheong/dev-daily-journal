@@ -366,7 +366,27 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     <li><details><summary><h4>Using $match and $group Stages in a MongoDB Aggregation Pipeline</h4></summary>
       <ul>
         <li>Most commonly used - <code>$match</code> and <code>$group</code>. Best to pplace <code>$match</code> as early as possibly in pipeline so that it can use indexes which helps with processing.</li>
-        <li>An example of using <code>$group</code> would be <code>{ $group: {_id: <expression>, field-name: {<accumulator>: <expression>}} }</code></li>
+        <li>An example of using <code>$group</code> would be <code>{ $group: {_id: expression, field-name: {accumulator: expression}} }</code></li>
+        <pre><code>
+        db.zips.aggregate([
+          { $match: {state: "CA"} },
+          { $group: {_id: "$city", totalZips: { $count : { }}} }
+        ])
+        </pre></code>
+        <li>Additional example for reference. In this case, location is a sub document and coordinates is being used as a grouping key and  we count the number of sightings to acquire famous coordinates</li>
+        <pre><code>
+        db.sightings.aggregate([
+          { $match: {species_common: 'Eastern Bluebird'} }, 
+          { $group: {_id: '$location.coordinates', number_of_sightings: 
+            { $count: {}} }
+          }
+        ])
+        </pre></code>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Using $sort and $limit Stages in a MongoDB Aggregation Pipeline</h4></summary>
+      <ul>
+        <li></li>
       </ul>
     </details></li>
   </ol>
