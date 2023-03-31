@@ -347,6 +347,26 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>The following can be used <code>.aggegate([{ $stage_name: {expression} }, { $second_stage_name: {expression} }])</code></li>
         <li>Stage is a single operation on data. Commonly used in stages - <code>$match</code> (for filtering), <code>$group</code> (group documents based on criteria) and <code>$sort</code> (put documents in specified order)</li>
         <li>Field references can be used to acquire and combine values from existing fields in the documents to create new ones if required</li>
+        <li>Example as shown below</li>
+        <pre><code>
+        db.collection.aggregate([
+            {
+                $stage1: {
+                    { expression1 },
+                    { expression2 }...
+                },
+                $stage2: {
+                    { expression1 }...
+                }
+            }
+        ])
+        </pre></code>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Using $match and $group Stages in a MongoDB Aggregation Pipeline</h4></summary>
+      <ul>
+        <li>Most commonly used - <code>$match</code> and <code>$group</code>. Best to pplace <code>$match</code> as early as possibly in pipeline so that it can use indexes which helps with processing.</li>
+        <li>An example of using <code>$group</code> would be <code>{ $group: {_id: <expression>, field-name: {<accumulator>: <expression>}} }</code></li>
       </ul>
     </details></li>
   </ol>
