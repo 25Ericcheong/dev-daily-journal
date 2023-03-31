@@ -254,7 +254,15 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     </details></li>
     <li><details><summary><h4>Updating multiple documents in MongoDB</h4></summary>
       <ul>
-        <li></li>
+        <li>Using <code>updatrMany({filter-object}, {updated-fields-object})</code> will allow the updates to occur for all documents that meet the filter criteria in the filter object</li>
+        <li>This method does not guarantee all documents will be updated at the same time. This can be checked against the number of successful update counts against the matched count documents.</li>
+        <li>Example is as shown</li>
+        <pre><code>
+        db.books.updateMany(
+          { publishedDate: { $lt: new Date("2019-01-01") } },
+          { $set: { status: "LEGACY" } }
+        )
+        <pre></code>
       </ul>
     </details></li>
   </ol>
