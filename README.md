@@ -265,7 +265,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
             $set: {last_seen: ISODate("2022-01-01")},
           }
         )
-        <pre></code>
+        </pre></code>
       </ul>
     </details></li>
     <li><details><summary><h4>Removing documents in MongoDB</h4></summary>
@@ -276,7 +276,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         db.books.updateMany(
           { publishedDate: { $lt: new Date("2019-01-01") } },
           { $set: { status: "LEGACY" } })
-        <pre></code>
+        </pre></code>
       </ul>
     </details></li>
   </ol>
