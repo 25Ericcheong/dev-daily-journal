@@ -386,7 +386,22 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     </details></li>
     <li><details><summary><h4>Using $sort and $limit Stages in a MongoDB Aggregation Pipeline</h4></summary>
       <ul>
+        <li>Note that order of stages would change the results of aggregation.</li>
+        <li>Example for reference</li>
+        <pre><code>
+        db.zips.aggregate([
+          { $sort: {pop: -1} },
+          { $limit:  5 }
+        ])
+        </pre></code>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Using $project, $count and $set Stages in a MongoDB Aggregation Pipeline</h4></summary>
+      <ul>
         <li></li>
+        <li>Example for reference</li>
+        <pre><code>
+        </pre></code>
       </ul>
     </details></li>
   </ol>
