@@ -309,7 +309,21 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     <li><details><summary><h4>Returning specific data from a query in MongoDB</h4></summary>
       <ul>
         <li>To limit specific fields from being acquired which will improve bandwidth performance. This is called projection.</li>
+        <li>Can choose to include or exlucde fields (can't combine both exception for _id field). To include we have field values to be 1 while to exclude, we have other field names to be 0 instead.</li>
         <pre><code>
+        // Return all restaurant inspections - business name and result fields only
+        db.inspections.find(
+          { sector: "Restaurant - 818" },
+          { business_name: 1, result: 1, _id: 0 }
+        )
+        </pre></code>
+        and even this - since we are excluding sub document fields
+        <pre><code>
+        // Return all inspections with result of "Pass" or "Warning" - exclude date and zip code
+        db.inspections.find(
+          { result: { $in: ["Pass", "Warning"] } },
+          { date: 0, "address.zip": 0 }
+        )
         </pre></code>
       </ul>
     </details></li>
