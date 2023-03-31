@@ -290,12 +290,33 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
       <ul>
         <li><code>cursor</code> is a pointer to the result set of a query like <code>find</code>. The methods that comes with it would be <code>.sort({field-name: 1 or -1})</code> and <code>.limit(size-of-results)</code>. Note that these are chained on top of a query. In the sort method, 1 would sort results from smallest to largest alphabetically (Mongo sorts by capitalized letters first)</li>
         <li>Limiting number of results can improve performance of app.</li>
-        <li>Example of utilizing limit and sort methods. The use f</li>
+        <li>Example of utilizing limit and sort methods. To sort by most recent dates - use <code>-1</code> instead</li>
         <pre><code>
         db.companies
-        .find({ category_code: "music" })
-        .sort({ number_of_employees: -1, _id: 1 })
+          .find({ category_code: "music" })
+          .sort({ number_of_employees: -1})
+          .limit(3)
+        </pre></code>
+        <li>An additional interesting example here as well which looks for any of the included names in provided array</li>
+        <pre><code>
+        db.sales
+        .find({ "items.name": { $in: ["laptop", "backpack", "printer paper"] }, "storeLocation": "London", })
+        .sort({ saleDate: -1, })
         .limit(3)
+        </pre></code>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Returning specific data from a query in MongoDB</h4></summary>
+      <ul>
+        <li>To limit specific fields from being acquired which will improve bandwidth performance. This is called projection.</li>
+        <pre><code>
+        </pre></code>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Counting documents in a MongoDB Collection</h4></summary>
+      <ul>
+        <li></li>
+        <pre><code>
         </pre></code>
       </ul>
     </details></li>
