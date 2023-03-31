@@ -246,8 +246,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         db.podcasts.findAndModify({
           query: { _id: ObjectId("6261a92dfee1ff300dc80bf1") },
           update: { $inc: { subscribers: 1 } },
-          new: true,
-        })
+          new: true,})
         </pre></code>
         Note that you can also set <code>upsert: true</code> to insert a new document if no documents are acquired with the inputted filter query.
       </ul>
@@ -256,12 +255,27 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
       <ul>
         <li>Using <code>updatrMany({filter-object}, {updated-fields-object})</code> will allow the updates to occur for all documents that meet the filter criteria in the filter object</li>
         <li>This method does not guarantee all documents will be updated at the same time. This can be checked against the number of successful update counts against the matched count documents.</li>
+        <li>Example is as shown. This code will update all documents with any of the values found in the array provided with the use of <code>$in</code> and then update any documents found with the specified date for the given field name.</li>
+        <pre><code>
+        db.birds.updateMany(
+          {
+            common_name: { $in: ["Blue Jay", "Grackle"]},
+          },
+          {
+            $set: {last_seen: ISODate("2022-01-01")},
+          }
+        )
+        <pre></code>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Removing documents in MongoDB</h4></summary>
+      <ul>
+        <li></li>
         <li>Example is as shown</li>
         <pre><code>
         db.books.updateMany(
           { publishedDate: { $lt: new Date("2019-01-01") } },
-          { $set: { status: "LEGACY" } }
-        )
+          { $set: { status: "LEGACY" } })
         <pre></code>
       </ul>
     </details></li>
