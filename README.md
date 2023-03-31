@@ -398,9 +398,26 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     </details></li>
     <li><details><summary><h4>Using $project, $count and $set Stages in a MongoDB Aggregation Pipeline</h4></summary>
       <ul>
-        <li></li>
-        <li>Example for reference</li>
+        <li><code>$project</code> determines output shape and usually last stage since we are formatting output. Can use to include and project fields with 1 or 0. We can even project a new field name too if required.</li>
+        <li><code>$set</code> adds or modifies fields in the pipeline. Useful when we want to change existing fields or add new ones to be used in upcoming pipeline stages.</li> 
+        <li><code>$count</code> returns total document count. </li>
+        <li>Example for <code>$project</code> where a new field name - population is projected with an existing field value</li>
         <pre><code>
+        { $project: {state:1, zip:1, population:"$pop", _id:0} }
+        </pre></code>
+        <li>Example for <code>$set</code> where a new field named place is created and subbed with values coming from two different fields in the existing document</li>
+        <pre><code>
+        { $set: {
+          place: {$concat:["$city",",","$state"]},
+          pop: 10000
+          }
+        }
+        </pre></code>
+        <li>Example for <code>$count</code> where we count the number of documents in collection and name the output field total_zips</li>
+        <pre><code>
+        {
+          $count: "total_zips"
+        }
         </pre></code>
       </ul>
     </details></li>
