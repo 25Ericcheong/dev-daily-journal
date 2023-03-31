@@ -208,7 +208,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
             {$set: {subscribers: 98562}}
           )
           </pre></code>
-          Look for a document with the specified title value and set the topics value with the provided array. If it does not exist, insert a new document (purpose of upsert)
+          Look for a document with the specified title value and set the topics value with the provided array. If it does not exist, insert a new document (purpose of upsert). You can also use <code>$inc</code> followed by the field and the value to incrementally increase the existing value by as well if required
           <pre><code>
           db.podcasts.updateOne(
             { title: "The Developer Hub" },
@@ -221,6 +221,17 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
           db.podcasts.updateOne(
             { _id: ObjectId("5e8f8f8f8f8f8f8f8f8f8f8") },
             { $push: { hosts: "Nic Raboy" } }
+          )
+          </pre></code>
+          To add multiple items to an array (if item does not exist - nothing will happen), you would require the <code>$each</code> command as shown below.
+          <pre><code>
+          db.birds.updateOne(
+            { _id: ObjectId("6268471e613e55b82d7065d7") },
+            {
+              $push: {
+                diet: { $each: ["newts", "opossum", "skunks", "squirrels"] },
+              },
+            }
           )
           </pre></code>
         </li>
