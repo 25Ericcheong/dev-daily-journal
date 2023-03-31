@@ -329,8 +329,10 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     </details></li>
     <li><details><summary><h4>Counting documents in a MongoDB Collection</h4></summary>
       <ul>
-        <li></li>
+        <li>This can be done with the <code>countDocuments({query-to-count-specific-documents-object}, options)</code> method. </li>
         <pre><code>
+        // Count number of trips over 120 minutes by subscribers
+        db.trips.countDocuments({ tripduration: { $gt: 120 }, usertype: "Subscriber" })
         </pre></code>
       </ul>
     </details></li>
