@@ -338,3 +338,16 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     </details></li>
   </ol>
 </details>
+
+<details><summary><h4>MongoDB Aggregation</h4></summary>
+  <ol>
+    <li><details><summary><h4>Inroduction to MongoDB Aggregation</h4></summary>
+      <ul>
+        <li>Used to build multi stage query - a series of stages completed one at a time, in order. Within each stage, data can be filtered, sorted, grouped and transformed.</li>
+        <li>The following can be used <code>.aggegate([{ $stage_name: {expression} }, { $second_stage_name: {expression} }])</code></li>
+        <li>Stage is a single operation on data. Commonly used in stages - <code>$match</code> (for filtering), <code>$group</code> (group documents based on criteria) and <code>$sort</code> (put documents in specified order)</li>
+        <li>Field references can be used to acquire and combine values from existing fields in the documents to create new ones if required</li>
+      </ul>
+    </details></li>
+  </ol>
+</details>
