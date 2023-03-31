@@ -237,7 +237,22 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         </li>
       </ul>
     </details></li>
-    <li><details><summary><h4>Updating a few Documents in MongoDB</h4></summary>
+    <li><details><summary><h4>Updating a Document and acquiring updated version in MongoDB</h4></summary>
+      <ul>
+        <li>There is a difference between <code>findAndModify({query: {filter-object}, update: {updated-fields-object}, new: true})</code> and <code>updateOne()</code> methods. The first method is used to return document that has just been updated. The <code>new: true</code> ensures that we get an updated version of the document as a return with the first method.</li>
+        <li>Typically, we would use <code>updateOne()</code> and <code>findOne()</code> to update a document and then look for the updated document. This does two round trips to and back from the server. This could also return the same document that could have already been outdated to begin with before returning a version that you thought is the most updated version.</li>
+        <li>An example is as shown</li>
+        <pre><code>
+        db.podcasts.findAndModify({
+          query: { _id: ObjectId("6261a92dfee1ff300dc80bf1") },
+          update: { $inc: { subscribers: 1 } },
+          new: true,
+        })
+        </pre></code>
+        Note that you can also set <code>upsert: true</code> to insert a new document if no documents are acquired with the inputted filter query.
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Updating multiple documents in MongoDB</h4></summary>
       <ul>
         <li></li>
       </ul>
