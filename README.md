@@ -401,7 +401,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li><code>$project</code> determines output shape and usually last stage since we are formatting output. Can use to include and project fields with 1 or 0. We can even project a new field name too if required.</li>
         <li><code>$set</code> adds or modifies fields in the pipeline. Useful when we want to change existing fields or add new ones to be used in upcoming pipeline stages.</li> 
         <li><code>$count</code> returns total document count. </li>
-        <li>Example for <code>$project</code> where a new field name - population is projected with an existing field value</li>
+        <li>Example for <code>$project</code> where a new field name - population is projected with an existing field value. If field name is not included, it would not be projected in results with the exception of _id field</li>
         <pre><code>
         { $project: {state:1, zip:1, population:"$pop", _id:0} }
         </pre></code>
@@ -419,6 +419,13 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
           $count: "total_zips"
         }
         </pre></code>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Using $out Stage in a MongoDB Aggregation Pipeline</h4></summary>
+      <ul>
+        <li><code>$out</code> has to be the last stage of the pipeline. Writes documents that are returned by an aggregation pipline into a collection. Will create a new collection if it does not exist.</li>
+        <li><code>$out: {db: "db-name", coll: "collection-name"}</code>. Can also exclude db field, meaning document is created in the same database that data is being aggregated from currently.</li>
+        <li>Note - if collection exists, the database will be overwritten with aggregated results.</li>
       </ul>
     </details></li>
   </ol>
