@@ -443,11 +443,12 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Most commonly used - compound field and single field indexes. Index that perform on arrays are multi key indexes.</li>
       </ul>
     </details></li>
-    <li><details><summary><h4>Creating single field index in MongoDB</h4></summary>
+    <li><details><summary><h4>Creating Single Field Index in MongoDB</h4></summary>
       <ul>
         <li>Done with the <code>createIndex()</code> command. Index can also include uniqueness command to prevent insertion of documents with the specified field that should only contain unique values</li>
         <li>There is a way to determine if there are any indexes with the <code>getIndexes()</code> command and can also determine if a query has an index in placed with the <code>explain()</code> command</li>
         <li>Ensuring single field index specified has unique values for each document. Worth noting that if a query is over indexed, it can cause performance issue. Creating single field index with equality constraint</li>
+        <li>Note that if index is not being used, you would see a <code>COLLSCAN</code> which indicates that MongoDB had to do a wide collection scan since no index has been created. An <code>IXSCAN</code> indicates an index is being used for specific query.</li>
         <pre><code>
           db.customers.createIndex({ email: 1 },{ unique:true })
         </pre></code>
@@ -455,6 +456,17 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <pre><code>
           db.accounts.explain().find(/* your query here */)
         </pre></code>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Creating Multikey Index in MongoDB</h4></summary>
+      <ul>
+        <li>This applies to defining an index on an array field which is called a multikey index can index primitive values, sub documents or sub arraays of an array. It can also be a part of a compound field defined index.</li>
+        <li>Limitation is that we can only have one array field per index.</li>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Creating Compound Index in MongoDB</h4></summary>
+      <ul>
+        <li></li>
       </ul>
     </details></li>
   </ol>
