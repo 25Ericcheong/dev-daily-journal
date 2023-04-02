@@ -440,12 +440,21 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>It helps MongoDB such that it wouldn't need to scan entire collection to check that it matches query criteria and preventing the need to sort results in memory</li>
         <li>Every collection will have an index by default (only has <code>_id</code> field). Each query should have its own index.</li>
         <li>Will need to update index data structure of document changes. Ensure that we only have indexes we need and remove unnucessary ones.</li>
-        <li>Most commonly used - compound field and single field indexes. Index that perform on arrays are multi key indexes.<li>
+        <li>Most commonly used - compound field and single field indexes. Index that perform on arrays are multi key indexes.</li>
       </ul>
     </details></li>
     <li><details><summary><h4>Creating single field index in MongoDB</h4></summary>
       <ul>
-        <li></li>
+        <li>Done with the <code>createIndex()</code> command. Index can also include uniqueness command to prevent insertion of documents with the specified field that should only contain unique values</li>
+        <li>There is a way to determine if there are any indexes with the <code>getIndexes()</code> command and can also determine if a query has an index in placed with the <code>explain()</code> command</li>
+        <li>Ensuring single field index specified has unique values for each document. Worth noting that if a query is over indexed, it can cause performance issue. Creating single field index with equality constraint</li>
+        <pre><code>
+          db.customers.createIndex({ email: 1 },{ unique:true })
+        </pre></code>
+        <li>To check that index created is working</li>
+        <pre><code>
+          db.accounts.explain().find(/* your query here */)
+        </pre></code>
       </ul>
     </details></li>
   </ol>
