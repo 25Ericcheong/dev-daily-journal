@@ -547,7 +547,28 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     </details></li>
     <li><details><summary><h4>Using $search and Compound Operators in MongoDB</h4></summary>
       <ul>
-        <li></li>
+        <li>Using compound operator, can assign different weights to specific fields to ensure we acquire most important results</li>
+        <li>Will need to create a $search stage first (which will be created in the aggregation stage via Mongo Atlas). Within the $search stage, we will have a $compound component where we specific the weight of each field with commands like <code>must</code>(field must have specific value), <code>must not</code>, <code>filter</code> and <code>should</code> (where we assign weights)</li>
+        <li>Example of creating a $search stage within the aggregation stage where the text "field" must be found in the habitat fieldd and a weight of 5 is allocated to wingspam_cm values that are greate than 45 in any documents.</li>
+        <pre><code>
+        {
+          "compound": {
+            "must": [{
+              "text": {
+                "query": "field",
+                "path": "habitat"
+              }
+            }],
+            "should": [{
+              "range": {
+                "gte": 45,
+                "path": "wingspan_cm",
+                "score": {"constant": {"value": 5}}
+              }
+            }]
+          }
+        }
+        </pre></code>
       </ul>
     </details></li>
   </ol>
