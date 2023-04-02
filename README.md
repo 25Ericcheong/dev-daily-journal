@@ -542,6 +542,11 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     </details></li>
     <li><details><summary><h4>Creating search Index with static field mapping in MongoDB</h4></summary>
       <ul>
+        <li>Static indexing on specific fields makes query quicker, saves processing power and time since we only focus on specific fields to be indexed</li>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Using $search and Compound Operators in MongoDB</h4></summary>
+      <ul>
         <li></li>
       </ul>
     </details></li>
