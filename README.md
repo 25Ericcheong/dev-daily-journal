@@ -499,3 +499,23 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     </details></li>
   </ol>
 </details>
+
+<details><summary><h4>MongoDB Atlas Search</h4></summary>
+  <ol>
+    <li><details><summary><h4>Using relevance based search and search Index MongoDB</h4></summary>
+      <ul>
+        <li>Relevance search is different from database search. It starts with search indexes which creates a reference for records to relevance-based search usage</li>
+        <li>Database search is used by developers and system administrators. These are the components of a search index</li>
+        <pre><code>
+        {
+          "analyzer": "lucene.standard",
+          "searchAnalyzer": "lucene.standard",
+          "mappings": {
+            "dynamic": true
+          }
+        }
+        </pre></code>
+      </ul>
+    </details></li>
+  </ol>
+</details>
