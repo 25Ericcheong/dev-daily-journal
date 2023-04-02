@@ -435,6 +435,16 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
   <ol>
     <li><details><summary><h4>Using MongoDB Indexes in Collections</h4></summary>
       <ul>
+        <li>Stores small portion of data from the collection to help with search efficiency. It points to document identity so that it is faster to look up and update specified document</li>
+        <li>It speeds up query searches, reduce disk I/O, reduce resources required to execute queries and also supports equality matches as well as range-based operations</li>
+        <li>It helps MongoDB such that it wouldn't need to scan entire collection to check that it matches query criteria and preventing the need to sort results in memory</li>
+        <li>Every collection will have an index by default (only has <code>_id</code> field). Each query should have its own index.</li>
+        <li>Will need to update index data structure of document changes. Ensure that we only have indexes we need and remove unnucessary ones.</li>
+        <li>Most commonly used - compound field and single field indexes. Index that perform on arrays are multi key indexes.<li>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Creating single field index in MongoDB</h4></summary>
+      <ul>
         <li></li>
       </ul>
     </details></li>
