@@ -522,6 +522,27 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Search index define how relevance based search should perform. Dynamic mapping would ensure all fields are indexed except for booleans, objectIds and timestamps</li>
         <li>If dynamic mapping is used, specific fields will not need to be specified for field mappings on Mongo Atlas UI</li>
         <li>It is also possible to dedicated weights to specific fields so that scoring would be properly distributed as expected</li>
+        <li>An example of utilizing the newly created search index (dynamic field mapping) and searching for the relevance text of "search" across multiple fields for each document which we then assign relevance scoring acquired for each document based on the relevance text - 'notepad'</li>
+        <pre><code>
+        db.sales.aggregate([
+          {
+            $search: {
+              index: 'sample_supplies-sales-dynamic',
+              text: {
+                query: 'notepad', path: { 'wildcard': '*' }
+              } } },
+          {
+            $set: {
+              score: { $meta: "searchScore" }
+              }
+          }
+        ])
+        </pre></code>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Creating search Index with static field mapping in MongoDB</h4></summary>
+      <ul>
+        <li></li>
       </ul>
     </details></li>
   </ol>
