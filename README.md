@@ -600,7 +600,8 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     </details></li>
     <li><details><summary><h4>Group search results by using facets in MongoDB</h4></summary>
       <ul>
-        <li></li>
+        <li>Allows us to categorize or group search results. These can be found in the $searchMeta and it is located there because it indicates how results have been aggregated and outputted.</li>
+        <li>We then categorize results or place them in "buckets" with the use of $facets</li>
       </ul>
     </li></details>
   </ol>
