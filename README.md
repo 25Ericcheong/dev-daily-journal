@@ -598,5 +598,10 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         </pre></code>
       </ul>
     </details></li>
+    <li><details><summary><h4>Group search results by using facets in MongoDB</h4></summary>
+      <ul>
+        <li></li>
+      </ul>
+    </li></details>
   </ol>
 </details>
