@@ -466,7 +466,29 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     </details></li>
     <li><details><summary><h4>Creating Compound Index in MongoDB</h4></summary>
       <ul>
-        <li></li>
+        <li>Index on multiple fields. Note that if other queries contain even one of the field listed in the multi field index, it will utilize the multi field index created whether it may be prefix or not in a chain of queries.</li>
+        <li>Note order matters and it is recommended that the order is as such - equality, range and then sort. This reduces in memory processing time. Meaning, the index created should be created in the order that matches query criteria. This would mean that the placement of fields is important in the index and it needs to be in sync with queries that will utilize the index that will be created.</li>
+        <li>An example of ensuring that the order of field for the index created has to match the query criteria as shown below.</li>
+        <pre><code>
+        db.customers
+          .find({ birthdate: {$gte:ISODate("1977-01-01")}, active:true })
+          .sort({ birthdate:-1, name:1 })
+        </pre></code>
+        <li>This ensures that the active field exists first and is true and then sorts birthdate and followed by name</li>
+        <pre<code>
+        db.customers.createIndex({
+          active:1, 
+          birthdate:-1,
+          name:1
+        })
+        <li>Ensuring that the query is fully covered ensures that no data is required to be fetched from in-memory or collection. This can be achieved by ensuring that only required fields are projected (as listed in the created index)</li>
+        <pre><code>
+        db.customers.explain()
+        .find(
+          { birthdate: {$gte:ISODate("1977-01-01")}, active:true },
+          { name:1, birthdate:1, _id:0 })
+        .sort({ birthdate:-1, name:1 })
+        </pre></code>
       </ul>
     </details></li>
   </ol>
