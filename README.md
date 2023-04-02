@@ -491,5 +491,11 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         </pre></code>
       </ul>
     </details></li>
+    <li><details><summary><h4>Deleting Indexes in MongoDB</h4></summary>
+      <ul>
+        <li>Deleting indexes that are no longer required will prevent redundant indexes from being used by a query. This will cause performance issues if not removed properly</li>
+        <li>The use of <code>dropIndex()</code> and <code>dropIndexes()</code> will allow the removal of indexes. Note that if no index names are provided to the <code>dropIndexes()</code> method, all indexes will be dropped. Providing an array of index names will remove all indexes provided within that array</li>
+      </ul>
+    </details></li>
   </ol>
 </details>
