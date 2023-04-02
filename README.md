@@ -505,7 +505,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     <li><details><summary><h4>Using relevance based search and search Index MongoDB</h4></summary>
       <ul>
         <li>Relevance search is different from database search. It starts with search indexes which creates a reference for records to relevance-based search usage</li>
-        <li>Database search is used by developers and system administrators. These are the components of a search index</li>
+        <li>Database search is used by developers and system administrators to help make database queries more efficient. These are the components of a search index</li>
         <pre><code>
         {
           "analyzer": "lucene.standard",
@@ -515,6 +515,13 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
           }
         }
         </pre></code>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Creating search Index with dynamic mapping in MongoDB</h4></summary>
+      <ul>
+        <li>Search index define how relevance based search should perform. Dynamic mapping would ensure all fields are indexed except for booleans, objectIds and timestamps</li>
+        <li>If dynamic mapping is used, specific fields will not need to be specified for field mappings on Mongo Atlas UI</li>
+        <li>It is also possible to dedicated weights to specific fields so that scoring would be properly distributed as expected</li>
       </ul>
     </details></li>
   </ol>
