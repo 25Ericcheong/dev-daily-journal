@@ -650,5 +650,11 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Avoid unbounded documents, think of how document may grow larger (example is embedding comments to a blog post and if comments continue to grow - so does the size of document - causing performance issue when writing/reading)</li>
       </ul>
     </details></li>
+    <li><details><summary><h4>Using Atlas Tools for Schema Help MongoDB</h4></summary>
+      <ul>
+        <li>Take notes of schemma design patterns to follow. Avoid anti patterns like massive arrays, massive number of collections, bloated documents, unnecessary indexes, queries without indexes and data that is accessed together from multiple collections</li>
+        <li>Data explorer and performance advisor can be used to identify these anti patterns</li>
+      </ul>
+    </details></li>
   </ol>
 </details>
