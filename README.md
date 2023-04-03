@@ -631,6 +631,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Many ways to model a relationship for documents. Note how context may be lost when different approaches have been taken to implement the relationships between the documents</li>
       </ul>
     </li></details>
+  
     <li><details><summary><h4>Embedding Data in Documents MongoDB</h4></summary>
       <ul>
         <li>Used for one to many and many to many relationships between documents. Useful because it makes use of data that are accessed together - should be stored together.</li>
@@ -638,17 +639,17 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>However, documents may grow too large causing latency and high memory usage. As documents are read in full to memory - which is detrimental to application performance</li>
         <li>To counter this, read more about schema anti pattern (avoid unbounded documents)</li>
       </ul>
-    </li></details>
+    </details></li>
     <li><details><summary><h4>Referencing Data in Documents MongoDB</h4></summary>
       <ul>
         <li>Saving _id of another document (can be from the same collection or different) as a field value in a document</li>
       </ul>
-    </li></details>
+    </details></li>
     <li><details><summary><h4>Scaling a Data Model MongoDB</h4></summary>
       <ul>
         <li>Ensuring scalability can achieve efficient query result times, memory usage, cpu usage and storage usage</li>
         <li>Avoid unbounded documents, think of how document may grow larger (example is embedding comments to a blog post and if comments continue to grow - so does the size of document - causing performance issue when writing/reading)</li>
       </ul>
-    </li></details>
+    </details></li>
   </ol>
 </details>
