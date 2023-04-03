@@ -631,7 +631,6 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Many ways to model a relationship for documents. Note how context may be lost when different approaches have been taken to implement the relationships between the documents</li>
       </ul>
     </li></details>
-  
     <li><details><summary><h4>Embedding Data in Documents MongoDB</h4></summary>
       <ul>
         <li>Used for one to many and many to many relationships between documents. Useful because it makes use of data that are accessed together - should be stored together.</li>
