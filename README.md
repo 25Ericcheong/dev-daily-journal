@@ -626,7 +626,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Referencing would include object ids from documents that belong to a different collection</li>
       </ul>
     </details></li>
-        <li><details><summary><h4>Modeling Data Relationships MongoDB</h4></summary>
+    <li><details><summary><h4>Modeling Data Relationships MongoDB</h4></summary>
       <ul>
         <li>Many ways to model a relationship for documents. Note how context may be lost when different approaches have been taken to implement the relationships between the documents</li>
       </ul>
