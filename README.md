@@ -617,5 +617,14 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>Embedding a document would mean that we're correlated two documents with one and another</li>
       </ul>
     </details></li>
+    <li><details><summary><h4>Types of Data Relationships MongoDB</h4></summary>
+      <ul>
+        <li>One to one, one to many and many to many. To model relationships - we can reference or embed data models</li>
+        <li>Note - data that is accessed together should be stored together. If data stored in multiple collections, database must scan through multiple different collections which increases cost</li>
+        <li>Embedding is taking related data and insert into document while referencing is when we refer documents in another collection to our document.</li>
+        <li>Example of embedding one to many would include information about other documents within an array for a single document</li>
+        <li>Referencing would include object ids from documents that belong to a different collection</li>
+      </ul>
+    </details></li>
   </ol>
 </details>
