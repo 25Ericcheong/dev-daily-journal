@@ -639,5 +639,16 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
         <li>To counter this, read more about schema anti pattern (avoid unbounded documents)</li>
       </ul>
     </li></details>
+    <li><details><summary><h4>Referencing Data in Documents MongoDB</h4></summary>
+      <ul>
+        <li>Saving _id of another document (can be from the same collection or different) as a field value in a document</li>
+      </ul>
+    </li></details>
+    <li><details><summary><h4>Scaling a Data Model MongoDB</h4></summary>
+      <ul>
+        <li>Ensuring scalability can achieve efficient query result times, memory usage, cpu usage and storage usage</li>
+        <li>Avoid unbounded documents, think of how document may grow larger (example is embedding comments to a blog post and if comments continue to grow - so does the size of document - causing performance issue when writing/reading)</li>
+      </ul>
+    </li></details>
   </ol>
 </details>
