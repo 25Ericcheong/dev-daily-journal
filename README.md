@@ -671,7 +671,24 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
     </details></li>
     <li><details><summary><h4>ACID Transactions in MongoDB</h4></summary>
       <ul>
-        <li></li>
+        <li>Determining single or multiple documents ACID transaction. In MongoDB, single documents are inherently ACID transaction</li>
+        <li>Multi documents operations are inherently not atomic. Will require additional steps. Will need to ensure that it is a multi-document ACID transaction.</li>
+        <li>Ensure understand requirements of app. MongoDB will 'lock' resources involved in a transaction which incrus cost. We will need to insure operations are wrapped in multi-document ACID transaction.</li>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>Using Transactions in MongoDB</h4></summary>
+      <ul>
+        <li>Determining single or multiple documents ACID transaction. In MongoDB, single documents are inherently ACID transaction</li>
+        <li>Session is a group of database operations that are related to each other and should be run together</li>
+        <li>Transaction has maximum runtime of less than one minute. Error like <code>MongoServerError: Transaction has been aborted</code> would mean that query would need to be run again</li>
+        <li>An example of using a multi-document transaction to ensure it is an ACID transaction</li>
+        <pre><code>
+        const session = db.getMongo().startSession()
+        session.startTransaction()
+        const account = session.getDatabase('< add database name here>').getCollection('<add collection name here>')
+        //Add database operations like .updateOne() here
+        session.commitTransaction() // or session.abortTransaction() to abort and rollback transactions
+        </pre></code>
       </ul>
     </details></li>
   </ol>
