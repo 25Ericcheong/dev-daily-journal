@@ -663,6 +663,14 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
   <ol>
     <li><details><summary><h4>Introduction to ACID Transactions in MongoDB</h4></summary>
       <ul>
+        <li>Group of database operations that will be completed as a unit or not at all</li>
+        <li>Atomicity, consistency, isolation and durability</li>
+        <li>Atomicity - all operations succeed or none at all and Consistency is changes made by operations are consistent with database constraints</li>
+        <li>Isolations - multiple transactions occuring at once should not affect other occuring transactions and Durability - changes made should persist</li>
+      </ul>
+    </details></li>
+    <li><details><summary><h4>ACID Transactions in MongoDB</h4></summary>
+      <ul>
         <li></li>
       </ul>
     </details></li>
