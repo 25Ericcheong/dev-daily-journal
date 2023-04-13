@@ -4,7 +4,7 @@ Web app project to log what I've learnt and my daily achievements! I haven't rea
 
 ## Goals
 - Naturally, this web app or tool should enable a user to create a log, categorize the log as an achievement or a simple note (also attach tags to them to help with searching later on) and save newly created logs in a database. User should be able to delete or modify logs as well.
-- Use and familiarize Node.js as the backend and ensure React can be rendered in the server (with TypeScript as well if possible). In addition to this, I also would like to learn PostgreSQL too (or Mongo in this case).
+- Use and familiarize Golang as the backend and ensure React can be rendered in the server (with TypeScript as well if possible). In addition to this, I also would like to learn PostgreSQL too (or Mongo in this case).
 
 ## Timeline
 - [ ] Project configuration and setup [19/03/2023]
