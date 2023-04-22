@@ -19,20 +19,6 @@ Web app project to log my daily achievements! I haven't really been able to log 
 
 <br/><br/>
 
-## Node.js 
-- Notes that will be included in this web app when it is fully functioning.
-
-<details><summary><h4>Node.js Crash Course Notes</h4></summary>
-<ul>
-  <li>Global object in Node is global. This object contains public methods that can be used throughout project. To call public methods attached to global object, we will not need to call the object as we can directly call the methods attached.</li>
-  <li>When attempting to <code>require</code> or import a code from another file, Node will execute the module/file you are trying to import.</li>
-  <li>Streams - allow us to use some of the data in a large file before a file has completely been read/written. A small portion of the data within a file (called buffer) will be sent down the stream for us to use without the need to wait for the whole file to be uploaded.</li>
-  <li>Instead of passing from reading stream to a writing stream, can use piping instead where we can pipe a read stream directly into write stream right away.</li>
-</ul>
-</details>
-
-<br/><br/>
-
 ## Mongo DB introduction
 - Materials are obtained from the [MongoDB](https://learn.mongodb.com/learning-paths/introduction-to-mongodb) official website. This section would consist of short pointers I would like to refer back to in the future if needed and will probably be included in this web app too.
 
