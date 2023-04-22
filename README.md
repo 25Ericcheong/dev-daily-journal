@@ -4,7 +4,7 @@ Web app project to log my daily achievements! I haven't really been able to log 
 
 ## Goals
 - Naturally, this web app or tool should enable a user to create a log, categorize the log as an achievement or a simple note (also attach tags to them to help with searching later on) and save newly created logs in a database. User should be able to delete or modify logs as well.
-- Use and familiarize Golang as the backend and ensure React can be rendered in the server (with TypeScript as well if possible). In addition to this, I also would like to learn PostgreSQL too (or Mongo in this case).
+- Use and familiarize Golang for the entire project.
 
 ## Timeline
 - [ ] Project configuration and setup [19/03/2023]
@@ -16,9 +16,6 @@ Web app project to log my daily achievements! I haven't really been able to log 
 - [ ] Setting up tools for testing that tests code before pushing things into production. Possibly have an isolated testing environment first [???]
 - [ ] Continuous integration to ensure tests are executed and provide feedback if something goes wrong [???]
 - [x] Completing MongoDB introduction course on MongoDB university
-
-## Structure
-- The Odin project will be the guide that I will follow as I slowly build this project and with progress - I will document each step of it for reference and at the same time; data to be inserted into this project haha. 
 
 <br/><br/>
 
