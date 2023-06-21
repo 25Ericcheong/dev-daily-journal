@@ -1,16 +1,16 @@
 # Dev daily journal
 ## Project Description
-Web app project to log my daily achievements! I haven't really been able to log these achievements in a more structured manner and I believe by having a personalized or internal tool - I would be able to do this more!
+I want to be able to log my daily achievements somewhere. It doesn't need to be achievements but it has to allow me to save what I have learned and allow me to tag these logs so that I could make a wide search for reference in the future. Lastly, a cool feature that I would really want to is to allow people to highlight parts of my article - whether to tell me I have made a grammartical error or an improvement to how I have explained something. 
 
 ## Goals
 - Naturally, this web app or tool should enable a user to create a log, categorize the log as an achievement or a simple note (also attach tags to them to help with searching later on) and save newly created logs in a database. User should be able to delete or modify logs as well.
 - Use and familiarize Golang for the entire project.
 
 ## Timeline
-- [ ] Project configuration and setup [19/03/2023]
-- [ ] To be able to create, modify, acquire and delete existing logs [02/04/2023]
-- [ ] A starting page that asks user to create an account or allow them to look at my "achievements" [09/04/2023]
-- [ ] Deployment and bug fixes if any pops up [23/04/2023]
+- [ ] Project configuration and setup
+- [ ] To be able to create, modify, acquire and delete existing logs
+- [ ] A starting page that asks user to create an account or allow them to look at my "achievements"
+- [ ] Deployment and bug fixes if any pops up
 
 ## Bonus
 - [ ] Setting up tools for testing that tests code before pushing things into production. Possibly have an isolated testing environment first [???]
