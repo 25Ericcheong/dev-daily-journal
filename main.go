@@ -12,11 +12,11 @@ func main() {
 	dir := http.Dir("./static")
 	fs := http.FileServer(dir)
 	mux := http.NewServeMux()
-	mux.Handle("/test", fs)
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Server has responded. You have requested %s\n", r.URL.Path)
 	})
+	mux.Handle("/test", fs)
 
 	err := http.ListenAndServe(":8000", nil)
 
