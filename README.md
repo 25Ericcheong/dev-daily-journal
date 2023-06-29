@@ -6,16 +6,8 @@ I want to be able to log my daily achievements somewhere. It doesn't need to be 
 - Naturally, this web app or tool should enable a user to create a log, categorize the log as an achievement or a simple note (also attach tags to them to help with searching later on) and save newly created logs in a database. User should be able to delete or modify logs as well.
 - Use and familiarize Golang for the entire project.
 
-## Timeline
-- [ ] Project configuration and setup
-- [ ] To be able to create, modify, acquire and delete existing logs
-- [ ] A starting page that asks user to create an account or allow them to look at my "achievements"
-- [ ] Deployment and bug fixes if any pops up
-
-## Bonus
-- [ ] Setting up tools for testing that tests code before pushing things into production. Possibly have an isolated testing environment first [???]
-- [ ] Continuous integration to ensure tests are executed and provide feedback if something goes wrong [???]
-- [x] Completing MongoDB introduction course on MongoDB university
+## Notes
+- I have been thinking about whether to use `HandleFunc` or `NewServeMux`. The only difference seems to be the use of `DefaultServeMux`. Reference: [This talks about how the `DefaultServeMux` is a global instance and that is bad when using a 3rd party package](https://stackoverflow.com/questions/54678816/using-handlefunc-on-http-vs-mux).
 
 <br/><br/>
 
