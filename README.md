@@ -8,7 +8,7 @@ I want to be able to log my daily achievements somewhere. It doesn't need to be 
 
 ## Notes
 - I have been thinking about whether to use `HandleFunc` or `NewServeMux`. The only difference seems to be the use of `DefaultServeMux`.
-- Reference: [This talks about how the `DefaultServeMux` is a global instance and that is bad when using a 3rd party package](https://stackoverflow.com/questions/54678816/using-handlefunc-on-http-vs-mux) and I am further convinced where performance may be worse and the nuance in getting information as [discussed](https://stackoverflow.com/questions/30063442/when-to-use-golangs-default-mux-versus-doing-your-own).
+- Reference: [This talks about how the `DefaultServeMux` is a global instance and that is bad when using a 3rd party package](https://stackoverflow.com/questions/54678816/using-handlefunc-on-http-vs-mux) and I am further convinced where performance may be worse and the nuance in getting information as [discussed](https://stackoverflow.com/questions/30063442/when-to-use-golangs-default-mux-versus-doing-your-own). Lastly, the global instance [will prevent us from determining the request type and makes it difficult to acquire information about URL like ID](https://perennialsky.medium.com/understand-handle-handler-and-handlefunc-in-go-e2c3c9ecef03)
 
 <br/><br/>
 
