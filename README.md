@@ -12,7 +12,13 @@ I want to be able to log my daily achievements somewhere. It doesn't need to be 
 
 <br/><br/>
 
-## Mongo DB introduction
+## About Golang 
+### Go init Function
+- `func init()` is executed first prior to `func main()`. Can take advantage of this to [variables initialization, check/fix program's state, registering, running one-time computations, etc.](https://medium.com/golangspec/init-functions-in-go-eac191b3860a) but you have to be aware of the [order](https://tutorialedge.net/golang/the-go-init-function/) because if a function is declared prior to `func init()`, the function is initialized first or if another function is used from another package - that gets initialized first which we should not rely on. Focus on writing systems that do not rely on order.
+
+<br/><br/>
+
+## Mongo DB introduction (to be moved into project)
 - Materials are obtained from the [MongoDB](https://learn.mongodb.com/learning-paths/introduction-to-mongodb) official website. This section would consist of short pointers I would like to refer back to in the future if needed and will probably be included in this web app too.
 
 <details><summary><h4>Intro to MongoDB</h4></summary>
