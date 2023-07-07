@@ -26,19 +26,6 @@ func main() {
 func index(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.URL.Path)
 
-	const tpl = `
-	<!DOCTYPE html>
-	<html>
-		<head>
-			<meta charset="UTF-8">
-			<title>{{.Title}}</title>
-		</head>
-		<body>
-			{{.Text}}
-		</body>
-	</html>
-	`
-
 	switch r.Method {
 	case http.MethodGet:
 		t, err := template.New("home.html").ParseFiles("./templates/home.html")
@@ -47,12 +34,9 @@ func index(w http.ResponseWriter, r *http.Request) {
 			log.Fatal(err)
 		}
 
-		data := struct {
-			Title string
-			Text  string
-		}{
+		data := Article {
 			Title: "Daily Dev Journal",
-			Text:  "Welcome to my first page with my first respond using the template library!",
+			Text: "Welcome to my first page with my first respond using the template library!",
 		}
 
 		err = t.Execute(w, data)
@@ -60,4 +44,9 @@ func index(w http.ResponseWriter, r *http.Request) {
 			log.Fatal(err)
 		}
 	}
+}
+
+type Article struct {
+	Title string
+	Text string
 }
