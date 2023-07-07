@@ -6,6 +6,9 @@ I want to be able to log my daily achievements somewhere. It doesn't need to be 
 - Naturally, this web app or tool should enable a user to create a log, categorize the log as an achievement or a simple note (also attach tags to them to help with searching later on) and save newly created logs in a database. User should be able to delete or modify logs as well.
 - Use and familiarize Golang for the entire project.
 
+## Development (to be moved into project)
+- [CompileDaemon](https://github.com/githubnemo/CompileDaemon) is currently being used as part of development process to auto build project when any changes are made. The command to run this is `CompileDaemon -command="./dev-daily-journal go run main.go"` within the root directory of project
+
 ## Notes
 - I have been thinking about whether to use `HandleFunc` or `NewServeMux`. The only difference seems to be the use of `DefaultServeMux` which has got to do with how/when it is being used when/if other packages are involved.
 - Reference: [This talks about how the `DefaultServeMux` is a global instance and that is bad when using a 3rd party package](https://stackoverflow.com/questions/54678816/using-handlefunc-on-http-vs-mux) and I am further convinced where performance may be worse and the nuance in getting information as [discussed](https://stackoverflow.com/questions/30063442/when-to-use-golangs-default-mux-versus-doing-your-own). Lastly, the global instance [will prevent us from determining the request type and makes it difficult to acquire information about URL like ID](https://perennialsky.medium.com/understand-handle-handler-and-handlefunc-in-go-e2c3c9ecef03)
