@@ -7,6 +7,11 @@ import (
 	"net/http"
 )
 
+type Article struct {
+	Title string
+	Text string
+}
+
 func init() {
 	fmt.Println("Server is running")
 }
@@ -44,9 +49,4 @@ func index(w http.ResponseWriter, r *http.Request) {
 			log.Fatal(err)
 		}
 	}
-}
-
-type Article struct {
-	Title string
-	Text string
 }
