@@ -71,7 +71,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 
 		data := Journal {
 			Title: "Daily Dev Journal",
-			Body: "Welcome to my first page with my first respond using the template library again",
+			Body: "Test daemon watcher to my first ssss with my first respond using the template library again",
 		}
 
 		err = t.Execute(w, data)
