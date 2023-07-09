@@ -8,13 +8,15 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/joho/godotenv"
+
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-type Article struct {
+type Journal struct {
 	Title string
-	Text string
+	Body string
 }
 
 func init() {
@@ -24,6 +26,11 @@ func init() {
 func main() {
 
 	// mongodb related setup
+	err := godotenv.Load()
+    if err != nil {
+    	log.Fatal(err)
+    }
+
 	uri := os.Getenv("MONGODB_URI")
 	if uri == "" {
 		log.Fatal("MONGODB_URI environment variable is not found")
@@ -62,9 +69,9 @@ func index(w http.ResponseWriter, r *http.Request) {
 			log.Fatal(err)
 		}
 
-		data := Article {
+		data := Journal {
 			Title: "Daily Dev Journal",
-			Text: "Welcome to my first page with my first respond using the template library!!!?",
+			Body: "Welcome to my first page with my first respond using the template library!!!?",
 		}
 
 		err = t.Execute(w, data)
