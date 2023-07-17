@@ -63,7 +63,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 
 	switch r.Method {
 	case http.MethodGet:
-		t, err := template.New("home.html").ParseFiles("./templates/home.html")
+		t, err := template.New("home.gohtml").ParseFiles("./templates/home.gohtml")
 
 		if err != nil {
 			log.Fatal(err)
