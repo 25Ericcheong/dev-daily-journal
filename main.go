@@ -63,7 +63,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 
 	switch r.Method {
 	case http.MethodGet:
-		t, err := template.New("home.gohtml").ParseFiles("./templates/home.gohtml")
+		t, err := template.New("index.html").ParseFiles("./templates/index.html")
 
 		if err != nil {
 			log.Fatal(err)
@@ -71,7 +71,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 
 		data := Journal {
 			Title: "Daily Dev Journal",
-			Body: "Test daemon watcher to my first ssss with my first respond using the template library again",
+			Body: "Test daemon watcher to my first taildwind work with my first respond using the template library again",
 		}
 
 		err = t.Execute(w, data)
