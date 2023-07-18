@@ -8,6 +8,7 @@ I want to be able to log my daily achievements somewhere. It doesn't need to be 
 
 ## Development (to be moved into project)
 - [CompileDaemon](https://github.com/githubnemo/CompileDaemon) is currently being used as part of development process to auto build project when any changes are made. The command to run this is `CompileDaemon -command="./dev-daily-journal go run main.go"` within the root directory of project
+- With [TailwindCSS](https://tailwindcss.com/) being used. The following command will always be required to ensure my latest changes to the styles are put into effect; `./tailwindcss -i ./styles/input.css -o ./styles/output.css --watch`. Remember to run this command within the `/html` directory. 
 
 ## Notes
 - I have been thinking about whether to use `HandleFunc` or `NewServeMux`. The only difference seems to be the use of `DefaultServeMux` which has got to do with how/when it is being used when/if other packages are involved.
