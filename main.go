@@ -49,7 +49,9 @@ func main() {
 
 	// preparing and establishing server
 	mux := http.NewServeMux()
+
 	mux.HandleFunc("/", index)
+	mux.Handle("/html/", http.StripPrefix("/html/", http.FileServer(http.Dir("html/"))))
 
 	err = http.ListenAndServe(":8000", mux)
 
