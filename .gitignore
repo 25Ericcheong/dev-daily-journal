@@ -2,4 +2,7 @@
 .env.*
 .vscode
 build
-/assets/tailwind/output.css
+
+/html/input.css
+/html/output.css
+/html/tailwindcss
