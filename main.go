@@ -51,7 +51,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/", index)
-	mux.Handle("/html/", http.StripPrefix("/html/", http.FileServer(http.Dir("html/"))))
+	mux.Handle("/html/styles/", http.StripPrefix("/html/styles/", http.FileServer(http.Dir("html/styles"))))
 
 	err = http.ListenAndServe(":8000", mux)
 

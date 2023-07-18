@@ -3,6 +3,5 @@
 .vscode
 build
 
-/html/input.css
-/html/output.css
+/html/styles/output.css
 /html/tailwindcss
