@@ -3,5 +3,9 @@
 .vscode
 build
 
+# relevant to tailwind css
 /html/styles/output.css
 /html/tailwindcss
+
+# relevant to htmx
+/html/htmx
