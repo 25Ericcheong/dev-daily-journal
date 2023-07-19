@@ -51,12 +51,31 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/", index)
+	mux.HandleFunc("/test/data", provideData)
 	mux.Handle("/html/styles/", http.StripPrefix("/html/styles/", http.FileServer(http.Dir("html/styles"))))
 
 	err = http.ListenAndServe(":8000", mux)
 
 	if err != nil {
 		log.Fatal(err)
+	}
+}
+
+func provideData(w http.ResponseWriter, r *http.Request) {
+	fmt.Println(r.URL.Path)
+
+	switch r.Method {
+	case http.MethodGet:
+		t, err := template.New("data.html").ParseFiles("./html/templates/data.html")
+
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		err = t.Execute(w, nil)
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 }
 

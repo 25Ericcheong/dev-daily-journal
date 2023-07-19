@@ -11,6 +11,18 @@
   </head>
   <body class="underline">
     <h1 class="text-3xl underline">Hello world!</h1>
-    {{.Body}}
+    {{.Body}} The crux of the demo is the final row:
+    <tr id="replaceMe">
+      <td colspan="3">
+        <button
+          class="btn bg-blue-500 text-white font-bold"
+          hx-get="/test/data"
+          hx-target="#replaceMe"
+          hx-swap="outerHTML"
+        >
+          Before request was sent
+        </button>
+      </td>
+    </tr>
   </body>
 </html>
