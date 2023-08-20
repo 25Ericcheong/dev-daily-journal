@@ -51,7 +51,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/", index)
-	mux.Handle("/html/styles/", http.StripPrefix("/html/styles/", http.FileServer(http.Dir("html/styles"))))
+	mux.Handle("/html/styles/", http.StripPrefix("/html/styles/", http.FileServer(http.Dir("./html/styles"))))
 
 	err = http.ListenAndServe(":8000", mux)
 
@@ -62,10 +62,11 @@ func main() {
 
 func index(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.URL.Path)
+	fmt.Println(r.Method)
 
 	switch r.Method {
 	case http.MethodGet:
-		t, err := template.New("index.html").ParseFiles("./html/templates/index.html")
+		temp, err := template.New("index.html").ParseFiles("./html/templates/index.html")
 
 		if err != nil {
 			log.Fatal(err)
@@ -73,10 +74,10 @@ func index(w http.ResponseWriter, r *http.Request) {
 
 		data := Journal {
 			Title: "Daily Dev Journal",
-			Body: "Tesssst daemon watcher to my first taildwind work with my first respond using the template library again",
+			Body: "Test daemon watcher to my first taildwind work with my first respond using the template library again",
 		}
 
-		err = t.Execute(w, data)
+		err = temp.Execute(w, data)
 		if err != nil {
 			log.Fatal(err)
 		}
