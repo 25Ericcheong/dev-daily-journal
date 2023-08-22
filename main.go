@@ -61,10 +61,25 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/", index)
+	mux.HandleFunc("/journal/create", createJournal)
 	mux.Handle("/html/styles/", http.StripPrefix("/html/styles/", http.FileServer(http.Dir("./html/styles"))))
 
 	err = http.ListenAndServe(port, mux)
 	checkErr(err, noPanic)
+}
+
+func createJournal(w http.ResponseWriter, r *http.Request) {
+	fmt.Println(r.URL.Path)
+	fmt.Println(r.Method)
+
+	switch r.Method {
+	case http.MethodGet:
+		temp, err := template.New("journal.html").ParseFiles("./html/templates/journal.html")
+		checkErr(err, noPanic)
+
+		err = temp.Execute(w, nil)
+		checkErr(err, noPanic)
+	}
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
@@ -87,5 +102,10 @@ func index(w http.ResponseWriter, r *http.Request) {
 	case http.MethodPost:
 		err := r.ParseForm()
 		checkErr(err, noPanic)
+
+		newJournal := Journal{}
+		newJournal.Title = r.Form.Get("new_journal_title")
+		newJournal.Body = r.Form.Get("new_journal_body")
+
 	}
 }

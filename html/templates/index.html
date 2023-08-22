@@ -12,6 +12,9 @@
   <body class="underline">
     <h1 class="text-3xl underline">Hello world!</h1>
     {{.Body}}
+    <form method="GET" action="/journal/create">
+      <button type="submit">Create journal</button>
+    </form>
   </body>
   <script>
     alert("welcome to dev daily journal");
