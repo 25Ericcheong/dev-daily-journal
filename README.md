@@ -31,6 +31,8 @@ I want to be able to log my daily achievements somewhere. It doesn't need to be 
 ### HTML Button
 - I find out that [a button will require a form owner](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) to actually peform an action to the specified end point; to better explain this. A form tag is required to encapsulate the button tag for the button to actually send a request to the specified endpoint (in its action attribute).
 
+<br/><b/>
+
 ## Mongo DB introduction (to be moved into project)
 - Materials are obtained from the [MongoDB](https://learn.mongodb.com/learning-paths/introduction-to-mongodb) official website. This section would consist of short pointers I would like to refer back to in the future if needed and will probably be included in this web app too.
 
