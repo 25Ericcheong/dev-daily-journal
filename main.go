@@ -107,5 +107,10 @@ func index(w http.ResponseWriter, r *http.Request) {
 		newJournal.Title = r.Form.Get("new_journal_title")
 		newJournal.Body = r.Form.Get("new_journal_body")
 
+		temp, err := template.New("index.html").ParseFiles("./html/templates/index.html")
+		checkErr(err, noPanic)
+
+		err = temp.Execute(w, newJournal)
+		checkErr(err, noPanic)
 	}
 }
