@@ -74,7 +74,7 @@ func createJournal(w http.ResponseWriter, r *http.Request) {
 
 	switch r.Method {
 	case http.MethodGet:
-		temp, err := template.New("journal.html").ParseFiles("./html/templates/journal.html")
+		temp, err := template.New("create_journal.html").ParseFiles("./html/templates/create_journal.html")
 		checkErr(err, noPanic)
 
 		err = temp.Execute(w, nil)
