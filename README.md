@@ -29,7 +29,7 @@ I want to be able to log my daily achievements somewhere. It doesn't need to be 
 
 ## About Others
 ### HTML Button
-- I find out that [a button will require a form owner](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) to actually peform an action to the specified end point; to better explain this. A form tag is required to encapsulate the button tag for the button to actually send a request to the specified endpoint (in its action attribute).
+- I find out that [a button will require a form owner](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) to actually peform an action to the specified end point; to better explain this. A form tag is required to encapsulate the button tag for the button to actually send a request to the specified endpoint (in its action attribute). Note; to send a request - can use anchor tags instead which by default sends a `GET` request to the server
 
 <br/><b/>
 
