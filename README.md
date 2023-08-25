@@ -1,10 +1,12 @@
 # Dev daily journal
 ## Project Description
-I want to be able to log my daily achievements somewhere. It doesn't need to be achievements but it has to allow me to save what I have learned and allow me to tag these logs so that I could make a wide search for reference in the future. Lastly, a cool feature that I would really want to is to allow people to highlight parts of my article - whether to tell me I have made a grammartical error or an improvement to how I have explained something. 
+I want to be able to log my daily achievements somewhere. It doesn't need to be achievements but it has to allow me to save what I have learned and allow me to tag these logs so that I could make a wide search for reference in the future. With the requirements I've listed; I would also like to:
+- Allow people to highlight certain parts of my article so that they would recommend a better way to phrase it (and I can choose to accept, decline or modify their suggestions and then apply theem
+- Perhaps save certain images/texts if they'd like to (this is still something I need to think about)
 
 ## Goals
 - Naturally, this web app or tool should enable a user to create a log, categorize the log as an achievement or a simple note (also attach tags to them to help with searching later on) and save newly created logs in a database. User should be able to delete or modify logs as well.
-- Use and familiarize Golang for the entire project.
+- Use and familiarize Golang for the entire project - essentially making it a SSR web app.
 
 ## Development (to be moved into project)
 - [CompileDaemon](https://github.com/githubnemo/CompileDaemon) is currently being used as part of development process to auto build project when any changes are made. The command to run this is `CompileDaemon -command="./dev-daily-journal go run main.go"` within the root directory of project
