@@ -62,10 +62,27 @@ func main() {
 
 	mux.HandleFunc("/", index)
 	mux.HandleFunc("/journal/create", createJournal)
+	mux.HandleFunc("/journal/view", viewJournal)
+
+	// enable server to serve output of tailwind css when requested
 	mux.Handle("/html/styles/", http.StripPrefix("/html/styles/", http.FileServer(http.Dir("./html/styles"))))
 
 	err = http.ListenAndServe(port, mux)
 	checkErr(err, noPanic)
+}
+
+func viewJournal(w http.ResponseWriter, r *http.Request) {
+	fmt.Println(r.URL.Path)
+	fmt.Println(r.Method)
+
+	switch r.Method {
+	case http.MethodGet:
+		temp, err := template.New("view_journal.html").ParseFiles("./html/templates/journals/view_journal.html")
+		checkErr(err, noPanic)
+
+		err = temp.Execute(w, nil)
+		checkErr(err, noPanic)
+	}
 }
 
 func createJournal(w http.ResponseWriter, r *http.Request) {
@@ -74,7 +91,7 @@ func createJournal(w http.ResponseWriter, r *http.Request) {
 
 	switch r.Method {
 	case http.MethodGet:
-		temp, err := template.New("create_journal.html").ParseFiles("./html/templates/create_journal.html")
+		temp, err := template.New("create_journal.html").ParseFiles("./html/templates/journals/create_journal.html")
 		checkErr(err, noPanic)
 
 		err = temp.Execute(w, nil)

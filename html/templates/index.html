@@ -7,14 +7,15 @@
     <meta name="copyright" content="Eric Cheong Kai Kit" />
     <link href="/html/styles/output.css" type="text/css" rel="stylesheet" />
     <script src="../htmx/htmx.min.js"></script>
-    <title>{{.Title}}</title>
+    <title>Daily Dev Journal</title>
   </head>
-  <body class="underline">
-    <h1 class="text-3xl underline">Hello world!</h1>
-    {{.Body}}
-    <a href="/journal/create">Create journal</a>
+  <body>
+    <nav></nav>
+    <section>
+      <h1 class="text-3xl">{{.Title}}</h1>
+      <p>{{.Body}}</p>
+      <a class="block" href="/journal/create">Create journal</a>
+    </section>
   </body>
-  <script>
-    alert("welcome to dev daily journal");
-  </script>
+  <script></script>
 </html>
