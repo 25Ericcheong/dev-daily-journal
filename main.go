@@ -16,6 +16,7 @@ import (
 
 type Journal struct {
 	Title string
+	Summary string
 	Body string
 }
 
@@ -38,6 +39,7 @@ func checkErr(err error, toPanic bool) {
 }
 
 func main() {
+	fmt.Printf("Running on port %v", port)
 
 	// mongodb related setup
 	err := godotenv.Load()
