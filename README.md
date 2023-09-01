@@ -4,6 +4,9 @@ I want to be able to log my daily achievements somewhere. It doesn't need to be 
 - Allow people to highlight certain parts of my article so that they would recommend a better way to phrase it (and I can choose to accept, decline or modify their suggestions and then apply theem
 - Perhaps save certain images/texts if they'd like to (this is still something I need to think about)
 
+## Project Quick Command
+- Use following command to build project. `CompileDaemon -command="./dev-daily-journal go run main.go" && cd ./html &&./tailwindcss -i ./styles/input.css -o ./styles/output.css --watch`
+
 ## Goals
 - Naturally, this web app or tool should enable a user to create a log, categorize the log as an achievement or a simple note (also attach tags to them to help with searching later on) and save newly created logs in a database. User should be able to delete or modify logs as well.
 - Use and familiarize Golang for the entire project - essentially making it a SSR web app.
