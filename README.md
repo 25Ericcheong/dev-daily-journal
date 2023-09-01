@@ -42,6 +42,10 @@ I want to be able to log my daily achievements somewhere. It doesn't need to be 
  #### Rest API Naming
  [API naming](https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/) convention will be followed. This will serve as a guide to me and will improvise as I go moving forward developing this web app.
 
+ ### Linux Ubuntu
+ #### Setting Default Browser
+ [Steps](https://stackoverflow.com/questions/41172692/xdg-open-does-not-open-the-default-browser) will allow you to set your preferred default browser that will be opened when the project runs.
+
 <br/><b/>
 
 ## Mongo DB introduction (to be moved into project)
