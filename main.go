@@ -7,6 +7,8 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"os/exec"
+	"runtime"
 
 	"github.com/joho/godotenv"
 
@@ -23,6 +25,7 @@ type Journal struct {
 const noPanic = false
 const mongoEnvUri = "MONGODB_URI"
 const port = ":8000"
+const localhost = "http://localhost:8000/"
 
 func init() {
 	fmt.Println("Server is running")
@@ -69,6 +72,12 @@ func main() {
 	// enable server to serve output of tailwind css when requested
 	mux.Handle("/html/styles/", http.StripPrefix("/html/styles/", http.FileServer(http.Dir("./html/styles"))))
 
+	// auto open default browser if linux
+	if runtime.GOOS == "linux" {
+		go exec.Command("xdg-open", localhost).Start()
+	}
+
+	// start server and listen to provided port
 	err = http.ListenAndServe(port, mux)
 	checkErr(err, noPanic)
 }
