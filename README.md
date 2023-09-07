@@ -4,23 +4,31 @@ I want to be able to log my daily achievements somewhere. It doesn't need to be 
 - Allow people to highlight certain parts of my article so that they would recommend a better way to phrase it (and I can choose to accept, decline or modify their suggestions and then apply theem
 - Perhaps save certain images/texts if they'd like to (this is still something I need to think about)
 
+<br/>
+
 ## Project Quick Command
 - Use following command to build project. `CompileDaemon -command="./dev-daily-journal go run main.go" && cd ./html &&./tailwindcss -i ./styles/input.css -o ./styles/output.css --watch`
+
+<br/>
 
 ## Goals
 - Naturally, this web app or tool should enable a user to create a log, categorize the log as an achievement or a simple note (also attach tags to them to help with searching later on) and save newly created logs in a database. User should be able to delete or modify logs as well.
 - Use and familiarize Golang for the entire project - essentially making it a SSR web app.
 
+<br/>
+
 ## Development (to be moved into project)
 - [CompileDaemon](https://github.com/githubnemo/CompileDaemon) is currently being used as part of development process to auto build project when any changes are made. The command to run this is `CompileDaemon -command="./dev-daily-journal go run main.go"` within the root directory of project
 - With [TailwindCSS](https://tailwindcss.com/) being used. The following command will always be required to ensure my latest changes to the styles are put into effect; `./tailwindcss -i ./styles/input.css -o ./styles/output.css --watch`. Remember to run this command within the `/html` directory. 
+
+<br/>
 
 ## Notes
 - I have been thinking about whether to use `HandleFunc` or `NewServeMux`. The only difference seems to be the use of `DefaultServeMux` which has got to do with how/when it is being used when/if other packages are involved.
 - Reference: [This talks about how the `DefaultServeMux` is a global instance and that is bad when using a 3rd party package](https://stackoverflow.com/questions/54678816/using-handlefunc-on-http-vs-mux) and I am further convinced where performance may be worse and the nuance in getting information as [discussed](https://stackoverflow.com/questions/30063442/when-to-use-golangs-default-mux-versus-doing-your-own). Lastly, the global instance [will prevent us from determining the request type and makes it difficult to acquire information about URL like ID](https://perennialsky.medium.com/understand-handle-handler-and-handlefunc-in-go-e2c3c9ecef03)
 - I realize why external third parties are used instead of the in-built `NewServeMux`. An example is URL parameters or knowing method type of the request in the backend. There are ways of [accomplishing](https://stackoverflow.com/questions/29211241/go-url-parameters-mapping) this but I would like to try to keep my code as clean as possible. Nevertheless, cool to find out about this.
 
-<br/><br/>
+<br/>
 
 ## About Golang (to be moved into project)
 ### Go init Function
@@ -30,7 +38,7 @@ I want to be able to log my daily achievements somewhere. It doesn't need to be 
 - [Flat structure or layered architecture](https://blog.logrocket.com/flat-structure-vs-layered-architecture-structuring-your-go-app/) are 2 possible ways I would like to try when developing this project. The plan is to start with flat structure first and separate out concerns by layers (packages) later on
 - It is important to note that there are slight variations too when applying the layered architecture structure. The first to define the [relevant interfaces within the layers themselves](https://dev.to/codypotter/layered-architectures-in-go-3cg8) without [defining more generalized / business related models and interfaces in the layer](https://www.gobeyond.dev/packages-as-layers/) where the inner layers would import from the [business/domain specific layer which can be found on the highest layer](https://github.com/benbjohnson/wtf)
 
-<br/><br/>
+<br/>
 
 ## About Others
 ### HTML
