@@ -69,8 +69,9 @@ func main() {
 	mux.HandleFunc("/journal/create", createJournal)
 	mux.HandleFunc("/journal/view", viewJournal)
 
-	// enable server to serve output of tailwind css when requested
+	// enable server to serve output of tailwind css when requested and htmx
 	mux.Handle("/html/styles/", http.StripPrefix("/html/styles/", http.FileServer(http.Dir("./html/styles"))))
+	mux.Handle("/html/htmx/", http.StripPrefix("/html/htmx/", http.FileServer(http.Dir("./html/htmx"))))
 
 	// auto open default browser if linux
 	if runtime.GOOS == "linux" {
