@@ -31,22 +31,13 @@ func init() {
 	fmt.Println("Server is running")
 }
 
-func checkErr(err error, toPanic bool) {
-	if err != nil {
-		if toPanic == true {
-			panic(err)
-		} else {
-			log.Fatal(err)
-		}
-    }
-}
-
 func main() {
 	fmt.Printf("Running on port %v", port)
 
-	// mongodb related setup
 	err := godotenv.Load()
-    checkErr(err, noPanic)
+    if err != nil {
+		log.Fatal("Failed to load relevant environment variables", err)
+	}
 
 	uri := os.Getenv(mongoEnvUri)
 	if uri == "" {
@@ -54,7 +45,10 @@ func main() {
 	}
 
 	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
-	checkErr(err, !noPanic)
+	if err != nil {
+		log.Fatal("Failed to connect to MongoDB Client", err)
+	}
+
 
 	defer func() {
 		if err := client.Disconnect(context.TODO()); err != nil {
@@ -66,8 +60,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/", index)
-	mux.HandleFunc("/journal/create", createJournal)
-	mux.HandleFunc("/journal/view", viewJournal)
+	mux.HandleFunc("/journal/", journal)
 
 	// enable server to serve output of tailwind css when requested and htmx
 	mux.Handle("/html/styles/", http.StripPrefix("/html/styles/", http.FileServer(http.Dir("./html/styles"))))
@@ -80,34 +73,29 @@ func main() {
 
 	// start server and listen to provided port
 	err = http.ListenAndServe(port, mux)
-	checkErr(err, noPanic)
-}
-
-func viewJournal(w http.ResponseWriter, r *http.Request) {
-	fmt.Println(r.URL.Path)
-	fmt.Println(r.Method)
-
-	switch r.Method {
-	case http.MethodGet:
-		temp, err := template.New("view_journal.html").ParseFiles("./html/templates/journals/view_journal.html")
-		checkErr(err, noPanic)
-
-		err = temp.Execute(w, nil)
-		checkErr(err, noPanic)
+	if (err != nil) {
+		log.Fatal(err)
 	}
+	
 }
 
-func createJournal(w http.ResponseWriter, r *http.Request) {
+func journal(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.URL.Path)
 	fmt.Println(r.Method)
 
 	switch r.Method {
 	case http.MethodGet:
-		temp, err := template.New("create_journal.html").ParseFiles("./html/templates/journals/create_journal.html")
-		checkErr(err, noPanic)
+		temp, err := template.ParseFiles("./html/templates/journals/journal.html")
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
 
 		err = temp.Execute(w, nil)
-		checkErr(err, noPanic)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
 	}
 }
 
@@ -133,20 +121,9 @@ func index(w http.ResponseWriter, r *http.Request) {
 		}
 
 		err = temp.Execute(w, data)
-		checkErr(err, noPanic)
-
-	case http.MethodPost:
-		err := r.ParseForm()
-		checkErr(err, noPanic)
-
-		newJournal := Journal{}
-		newJournal.Title = r.Form.Get("new_journal_title")
-		newJournal.Body = r.Form.Get("new_journal_body")
-
-		temp, err := template.New("index.html").ParseFiles("./html/templates/index.html")
-		checkErr(err, noPanic)
-
-		err = temp.Execute(w, newJournal)
-		checkErr(err, noPanic)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
 	}
 }
