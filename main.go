@@ -117,8 +117,15 @@ func index(w http.ResponseWriter, r *http.Request) {
 
 	switch r.Method {
 	case http.MethodGet:
-		temp, err := template.New("index.html").ParseFiles("./html/templates/index.html")
-		checkErr(err, noPanic)
+		
+		temp, err := template.ParseFiles(
+			"./html/templates/index.html",
+			"./html/templates/parts/head.html",
+		)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
 
 		data := Journal {
 			Title: "Daily Dev Journal",
