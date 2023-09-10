@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   {{ template "head" . }}
-  <body>
-    <nav></nav>
+  <body class="underline">
     <section>
-      <h1 class="text-3xl">{{.Title}}</h1>
+      <h1 class="text-3xl underline">{{.Title}}</h1>
       <p>{{.Body}}</p>
-      <a class="block" href="/journal/">Create journal</a>
     </section>
+    <a href="/">Back</a>
   </body>
   <script></script>
 </html>
