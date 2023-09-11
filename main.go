@@ -61,6 +61,7 @@ func main() {
 
 	mux.HandleFunc("/", index)
 	mux.HandleFunc("/journal/", journal)
+	mux.HandleFunc("/test/", test)
 
 	// enable server to serve output of tailwind css when requested and htmx
 	mux.Handle("/html/styles/", http.StripPrefix("/html/styles/", http.FileServer(http.Dir("./html/styles"))))
@@ -76,7 +77,18 @@ func main() {
 	if (err != nil) {
 		log.Fatal(err)
 	}
-	
+}
+
+func test(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("DATA REQUESTED")
+	fmt.Println(r.URL.Path)
+	fmt.Println(r.Method)
+
+	switch r.Method {
+	case http.MethodGet:
+		b := []byte("TEST DUMMY RESPOND DATA")
+		w.Write(b)
+	}
 }
 
 func journal(w http.ResponseWriter, r *http.Request) {

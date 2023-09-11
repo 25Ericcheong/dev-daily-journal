@@ -7,6 +7,15 @@
       <p>{{.Body}}</p>
     </section>
     <a href="/">Back</a>
+    <button
+      hx-get="/test"
+      hx-trigger="click"
+      hx-target="#received-data"
+      hx-swap="innerHTML"
+    >
+      Get data
+    </button>
+    <div id="received-data"></div>
   </body>
   <script></script>
 </html>
