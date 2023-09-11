@@ -39,7 +39,7 @@ I want to be able to log my daily achievements somewhere. It doesn't need to be 
 - It is important to note that there are slight variations too when applying the layered architecture structure. The first to define the [relevant interfaces within the layers themselves](https://dev.to/codypotter/layered-architectures-in-go-3cg8) without [defining more generalized / business related models and interfaces in the layer](https://www.gobeyond.dev/packages-as-layers/) where the inner layers would import from the [business/domain specific layer which can be found on the highest layer](https://github.com/benbjohnson/wtf)
 
 ### Go nested templates
- [This example](https://gist.github.com/joyrexus/ff9be7a1c3769a84360f) clearly demonstrates how one can leverage Go nesting templates to reuse code where necessary. Another example that talks about serving [almost static web pages](https://www.alexedwards.net/blog/serving-static-sites-with-go) could also be a good read. Essentially, I used to contents in templates that are being repeated unnecessarily and this solved it!
+- [This example](https://gist.github.com/joyrexus/ff9be7a1c3769a84360f) clearly demonstrates how one can leverage Go nesting templates to reuse code where necessary. Another example that talks about serving [almost static web pages](https://www.alexedwards.net/blog/serving-static-sites-with-go) could also be a good read. Essentially, I used to contents in templates that are being repeated unnecessarily and this solved it!
 
 <br/>
 
