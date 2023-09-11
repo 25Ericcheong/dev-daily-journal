@@ -85,13 +85,25 @@ func journal(w http.ResponseWriter, r *http.Request) {
 
 	switch r.Method {
 	case http.MethodGet:
-		temp, err := template.ParseFiles("./html/templates/journals/journal.html")
+		temp, err := template.ParseFiles(
+			"./html/templates/journal.html",
+			"./html/templates/parts/head.html",
+		)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
 
-		err = temp.Execute(w, nil)
+		data := Journal {
+			Title: "Daily Dev Journal | Content",
+			Body: "Specific journal content acquired from MongoDB database hew hew",
+		}
+
+		err = temp.Execute(w, data)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
