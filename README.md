@@ -1,6 +1,6 @@
 # Dev daily journal
 ## Project Description
-I want to be able to log my daily achievements somewhere. It doesn't need to be achievements but it has to allow me to save what I have learned and allow me to tag these logs so that I could make a wide search for reference in the future. With the requirements I've listed; I would also like to:
+I want to be able to log my daily achievements somewhere. It has to allow me to save what I have learned and allow me to tag these logs so that I could make a wide search for reference in the future. With the requirements I've listed; I would also like to:
 - Allow people to highlight certain parts of my article so that they would recommend a better way to phrase it (and I can choose to accept, decline or modify their suggestions and then apply theem
 - Perhaps save certain images/texts if they'd like to (this is still something I need to think about - will need to have fully developed web app first!)
 
