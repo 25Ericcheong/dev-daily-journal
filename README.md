@@ -8,6 +8,7 @@ I want to be able to log my daily achievements somewhere. It has to allow me to 
 
 ## Project Quick Command
 - Use following command to build project. `CompileDaemon -command="./dev-daily-journal go run main.go" && cd ./html &&./tailwindcss -i ./styles/input.css -o ./styles/output.css --watch`
+- These are my [shortcuts](https://www.jetbrains.com/help/rider/Working_with_the_IDE_Features_from_Command_Line.html) that I have configured on my linux machine. Just a reminder (which will also be moved into the project)
 
 <br/>
 
